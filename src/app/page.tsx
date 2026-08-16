@@ -254,7 +254,7 @@ export default function HomePage() {
               Hyderabad do not hesitate to expand our capabilities to bring out the unique environment to which you
               aspire.
             </p>
-            <AppLink href="/about" className={styles.textLink}>
+            <AppLink href="/#about" className={styles.textLink}>
               DISCOVER OUR STORY →
             </AppLink>
           </div>
@@ -284,7 +284,7 @@ export default function HomePage() {
               more. We are the best interior designer Hyderabad will give complete interiors to your kitchen at an
               ideal cost.
             </p>
-            <AppLink href="/why-essence-interiors" className={styles.goldCta}>
+            <AppLink href="/#why-us" className={styles.goldCta}>
               OUR DESIGN PHILOSOPHY <span>→</span>
             </AppLink>
           </div>
@@ -293,7 +293,7 @@ export default function HomePage() {
         <div className={styles.intentionValuesWrap}>
           <div className={styles.intentionValues}>
             {INTENTION_VALUES.map((v) => (
-              <AppLink key={v.title} href="/why-essence-interiors" className={styles.intentionValue}>
+              <AppLink key={v.title} href="/#why-us" className={styles.intentionValue}>
                 <div className={styles.valueCircle}>
                   <span className="ei-icon">{v.icon}</span>
                 </div>
@@ -326,7 +326,7 @@ export default function HomePage() {
             <p className={styles.eyebrow}>Selected Work</p>
             <h2 className={styles.projectsHeading}>Spaces We&apos;ve Brought to Life.</h2>
           </div>
-          <AppLink href="/projects" className={styles.textLink} style={{ whiteSpace: "nowrap" }}>
+          <AppLink href="/#projects" className={styles.textLink} style={{ whiteSpace: "nowrap" }}>
             VIEW ALL PROJECTS →
           </AppLink>
         </div>
@@ -334,7 +334,7 @@ export default function HomePage() {
           {PROJECTS.map((p) => (
             <AppLink
               key={p.name}
-              href="/projects"
+              href="/#projects"
               className={styles.projectCell}
               style={{ gridColumn: p.col, gridRow: p.row }}
             >
@@ -372,7 +372,7 @@ export default function HomePage() {
               CH. Sudheera, one of the best interior designers in Hyderabad offers in-depth consultation
               and comprehensive theme-based solution at affordable price in its class.
             </p>
-            <AppLink href="/why-essence-interiors" className={styles.outlineCta}>
+            <AppLink href="/#why-us" className={styles.outlineCta}>
               DISCOVER THE DIFFERENCE <span>→</span>
             </AppLink>
           </div>
@@ -381,7 +381,7 @@ export default function HomePage() {
         <div className={styles.diffValuesWrap}>
           <div className={styles.diffValues}>
             {DIFFERENCE_VALUES.map((d) => (
-              <AppLink key={d.title} href="/why-essence-interiors" className={styles.diffValue}>
+              <AppLink key={d.title} href="/#why-us" className={styles.diffValue}>
                 <span className="ei-icon" style={{ color: "#B8863B", display: "block", marginBottom: 16, fontSize: 34 }}>
                   {d.icon}
                 </span>
