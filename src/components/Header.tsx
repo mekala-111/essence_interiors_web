@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { usePathname, useRouter } from "next/navigation";
 import AppLink from "./AppLink";
-import { NAV_ITEMS, goTo, headerOffset, scrollToId } from "@/lib/nav";
+import { NAV_ITEMS, goTo } from "@/lib/nav";
 import styles from "./Header.module.css";
 
 export default function Header({ forceSolid = false }: { forceSolid?: boolean }) {
@@ -12,7 +12,6 @@ export default function Header({ forceSolid = false }: { forceSolid?: boolean })
   const router = useRouter();
   const [scrolledState, setScrolledState] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [activeId, setActiveId] = useState("home");
 
   useEffect(() => {
     setMobileOpen(false);
@@ -32,52 +31,11 @@ export default function Header({ forceSolid = false }: { forceSolid?: boolean })
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    if (pathname !== "/") return;
-    const applyHash = () => {
-      const id = window.location.hash.replace("#", "");
-      if (!id) return;
-      if ("scrollRestoration" in history) history.scrollRestoration = "manual";
-      scrollToId(id);
-    };
-    const t = window.setTimeout(applyHash, 200);
-    window.addEventListener("hashchange", applyHash);
-    window.addEventListener("popstate", applyHash);
-    return () => {
-      window.clearTimeout(t);
-      window.removeEventListener("hashchange", applyHash);
-      window.removeEventListener("popstate", applyHash);
-    };
-  }, [pathname]);
-
-  useEffect(() => {
-    if (pathname !== "/") return;
-    const ids = NAV_ITEMS.map((i) => i.id).filter(Boolean) as string[];
-
-    const spy = () => {
-      const line = window.scrollY + headerOffset() + 24;
-      let current = ids[0] ?? "home";
-      for (const id of ids) {
-        const el = document.getElementById(id);
-        if (!el) continue;
-        if (el.getBoundingClientRect().top + window.scrollY <= line) current = id;
-      }
-      setActiveId(current);
-    };
-
-    spy();
-    window.addEventListener("scroll", spy, { passive: true });
-    return () => window.removeEventListener("scroll", spy);
-  }, [pathname]);
-
   const scrolled = scrolledState || forceSolid || pathname !== "/";
 
-  function isActive(item: (typeof NAV_ITEMS)[number]) {
-    if (item.id) {
-      if (pathname === "/") return activeId === item.id;
-      return false;
-    }
-    return pathname === item.href || pathname.startsWith(`${item.href}/`);
+  function isActive(href: string) {
+    if (href === "/") return pathname === "/";
+    return pathname === href || pathname.startsWith(`${href}/`);
   }
 
   const menu = mobileOpen ? (
@@ -91,7 +49,7 @@ export default function Header({ forceSolid = false }: { forceSolid?: boolean })
           <button
             key={item.label}
             type="button"
-            className={`${styles.mobileLink} ${isActive(item) ? styles.mobileLinkActive : ""}`}
+            className={`${styles.mobileLink} ${isActive(item.href) ? styles.mobileLinkActive : ""}`}
             onClick={() => {
               setMobileOpen(false);
               goTo(item.href, (url) => router.push(url));
@@ -118,7 +76,7 @@ export default function Header({ forceSolid = false }: { forceSolid?: boolean })
     <>
       <header className={`${styles.header} ${scrolled ? styles.headerSolid : ""}`}>
         <div className={styles.bar}>
-          <AppLink href="/#home" className={styles.logoLink}>
+          <AppLink href="/" className={styles.logoLink}>
             <div className={scrolled ? styles.logoPlate : styles.logoBare}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/images/essence-interiors-hyderabad-logo.png" alt="Essence Interiors" className={styles.logo} />
@@ -128,7 +86,7 @@ export default function Header({ forceSolid = false }: { forceSolid?: boolean })
           <nav className={styles.nav}>
             {NAV_ITEMS.map((item) => (
               <div key={item.label} className={styles.navItem}>
-                <AppLink href={item.href} className={`${styles.navLink} ${isActive(item) ? styles.navLinkActive : ""}`}>
+                <AppLink href={item.href} className={`${styles.navLink} ${isActive(item.href) ? styles.navLinkActive : ""}`}>
                   {item.label}
                 </AppLink>
               </div>

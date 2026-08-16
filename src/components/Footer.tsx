@@ -6,12 +6,12 @@ import { fetchChannelVideos } from "@/lib/videos";
 import styles from "./Footer.module.css";
 
 const COMPANY_LINKS = [
-  { label: "About", href: "/#about" },
-  { label: "Why Essence", href: "/#why-us" },
-  { label: "Projects", href: "/#projects" },
+  { label: "About", href: "/about" },
+  { label: "Why Essence", href: "/why-essence-interiors" },
+  { label: "Projects", href: "/projects" },
   { label: "Gallery", href: "/gallery" },
   { label: "Portfolio", href: "/portfolio" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const SERVICE_LINKS = [

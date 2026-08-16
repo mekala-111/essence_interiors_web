@@ -1,20 +1,17 @@
-export const SECTION_IDS = ["home", "about", "why-us", "projects", "services", "contact"] as const;
-
 export type NavItem = {
   label: string;
   href: string;
-  id?: (typeof SECTION_IDS)[number];
 };
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "Home", href: "/#home", id: "home" },
-  { label: "About", href: "/#about", id: "about" },
-  { label: "Why Us", href: "/#why-us", id: "why-us" },
-  { label: "Projects", href: "/#projects", id: "projects" },
-  { label: "Services", href: "/#services", id: "services" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Why Essence", href: "/why-essence-interiors" },
+  { label: "Projects", href: "/projects" },
   { label: "Gallery", href: "/gallery" },
   { label: "Portfolio", href: "/portfolio" },
-  { label: "Contact", href: "/#contact", id: "contact" },
+  { label: "Services", href: "/services" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export function headerOffset() {
