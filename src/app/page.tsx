@@ -10,7 +10,7 @@ import HeroBg from "./HeroBg";
 import styles from "./page.module.css";
 
 const DESCRIPTION =
-  "The best Interior Designers in Hyderabad. We provide residential interior designs as well as residential architectural designs. Our projects include luxury";
+  "Interior designers in Hyderabad for homes, villas, modular kitchens and turnkey interiors. Essence Interiors designs and executes residential spaces in Nallagandla and across Hyderabad.";
 
 export const metadata: Metadata = {
   title: { absolute: "Home - Essence Interior Designers" },

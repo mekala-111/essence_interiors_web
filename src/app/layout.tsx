@@ -3,6 +3,7 @@ import { Playfair_Display, Outfit } from "next/font/google";
 import Header from "@/components/Header";
 import SideRail from "@/components/SideRail";
 import SplashScreen from "@/components/SplashScreen";
+import { LOCAL_BUSINESS_JSON_LD, SITE_DESCRIPTION } from "@/lib/seo";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -23,8 +24,20 @@ export const metadata: Metadata = {
     default: "Essence Interior Designers",
     template: "%s | Essence Interiors",
   },
-  description:
-    "The best Interior Designers in Hyderabad. We provide residential interior designs as well as residential architectural designs. Our projects include luxury",
+  description: SITE_DESCRIPTION,
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    siteName: "Essence Interiors",
+    images: [
+      {
+        url: "/images/luxury-interior-design-hyderabad-01.jpg",
+        width: 1200,
+        height: 800,
+        alt: "Essence Interiors Hyderabad",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -38,6 +51,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         />
       </head>
       <body style={{ fontFamily: "var(--font-body), sans-serif" }}>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_JSON_LD) }} />
         <SplashScreen />
         <Header />
         {children}

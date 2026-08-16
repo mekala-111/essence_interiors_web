@@ -20,30 +20,19 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
     },
   },
-  alternates: { canonical: "https://essenceinteriors.co.in/about-us/" },
+  alternates: { canonical: "https://essenceinteriors.co.in/about/" },
   openGraph: {
-    locale: "en_US",
+    locale: "en_IN",
     type: "article",
     title: "About Us - Essence Interior Designers",
     description: DESCRIPTION,
-    url: "https://essenceinteriors.co.in/about-us/",
+    url: "https://essenceinteriors.co.in/about/",
     siteName: "Essence Interiors",
-    images: [
-      {
-        url: "https://essenceinteriors.co.in/wp-content/uploads/2024/03/Best-Residential-Interior-Designers-in-West-Delhi.jpg",
-        width: 750,
-        height: 350,
-        alt: "About Us",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "About Us - Essence Interior Designers",
     description: DESCRIPTION,
-    images: [
-      "https://essenceinteriors.co.in/wp-content/uploads/2024/03/Best-Residential-Interior-Designers-in-West-Delhi.jpg",
-    ],
   },
 };
 
