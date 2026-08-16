@@ -46,13 +46,23 @@ export default function Header({ forceSolid = false }: { forceSolid?: boolean })
           return (
             <div key={item.label} className={styles.mobileItem}>
               <div className={styles.mobileItemRow}>
-                <Link
-                  href={item.href}
-                  onClick={() => setMobileOpen(false)}
-                  className={`${styles.mobileLink} ${isNavActive(item, pathname) ? styles.mobileLinkActive : ""}`}
-                >
-                  {item.label}
-                </Link>
+                {hasChildren ? (
+                  <button
+                    type="button"
+                    onClick={() => setMobileExpanded((s) => ({ ...s, [item.label]: !s[item.label] }))}
+                    className={`${styles.mobileLink} ${styles.mobileParent} ${isNavActive(item, pathname) ? styles.mobileLinkActive : ""}`}
+                  >
+                    {item.label}
+                  </button>
+                ) : (
+                  <Link
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className={`${styles.mobileLink} ${isNavActive(item, pathname) ? styles.mobileLinkActive : ""}`}
+                  >
+                    {item.label}
+                  </Link>
+                )}
                 {hasChildren ? (
                   <button
                     type="button"
@@ -60,7 +70,9 @@ export default function Header({ forceSolid = false }: { forceSolid?: boolean })
                     className={styles.mobileToggle}
                     onClick={() => setMobileExpanded((s) => ({ ...s, [item.label]: !s[item.label] }))}
                   >
-                    {expanded ? "−" : "+"}
+                    <span className={`ei-icon ${styles.toggleIcon}`}>
+                      {expanded ? "expand_less" : "expand_more"}
+                    </span>
                   </button>
                 ) : null}
               </div>

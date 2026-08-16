@@ -220,6 +220,14 @@
   }
 }
 
+@media (hover: none) or (pointer: coarse) {
+  .navItem:active .dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
 .actions {
   display: flex;
   align-items: center;
@@ -315,12 +323,19 @@
   background: #082b1d;
   touch-action: manipulation;
   -webkit-tap-highlight-color: rgba(210, 170, 104, 0.28);
+  border: none;
+  cursor: pointer;
+  text-align: left;
 }
 
 .mobileLink:hover,
 .mobileLinkActive {
   color: #d2aa68;
   background: #0a3324;
+}
+
+.mobileParent {
+  cursor: pointer;
 }
 
 .mobileToggle {
@@ -334,6 +349,18 @@
   line-height: 1;
   cursor: pointer;
   touch-action: manipulation;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.mobileToggle:active {
+  background: #0a3324;
+}
+
+.toggleIcon {
+  font-size: 24px;
 }
 
 .mobileSubList {
@@ -353,6 +380,12 @@
   font-size: 14px;
   background: #061c14;
   touch-action: manipulation;
+  transition: all 0.2s ease;
+}
+
+.mobileSubLink:hover {
+  color: #d2aa68;
+  background: #0a3324;
 }
 
 .mobileCta {
