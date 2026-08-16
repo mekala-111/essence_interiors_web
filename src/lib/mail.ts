@@ -38,10 +38,15 @@ export async function sendStudioMail(opts: {
     return false;
   }
 
+  const smtpUser = process.env.SMTP_USER!;
+  const from =
+    process.env.MAIL_FROM || "Essence Interiors <info@essenceinteriors.co.in>";
+
   await transporter.sendMail({
-    from: process.env.MAIL_FROM || process.env.SMTP_USER!,
+    from,
     to: STUDIO_EMAIL,
     replyTo: opts.replyTo,
+    envelope: { from: smtpUser, to: STUDIO_EMAIL },
     subject: opts.subject,
     text: opts.text,
     html: opts.html,

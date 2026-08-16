@@ -2,12 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PortfolioViewer, { PDF } from "./PortfolioViewer";
 import styles from "./page.module.css";
 
 const DESCRIPTION =
   "Browse the Essence Interiors portfolio — a lookbook of residential interiors in Hyderabad, from kitchens and bedrooms to living spaces.";
-
-const PDF = "/Our%20portfolio.pdf";
 
 export const metadata: Metadata = {
   title: { absolute: "Portfolio - Essence Interior Designers" },
@@ -51,12 +50,12 @@ export default function PortfolioPage() {
             </div>
             <h1 className={styles.title}>Portfolio</h1>
           </div>
-          <a href={PDF} download="Essence-Interiors-Portfolio.pdf" className={styles.download}>
+          <a href={PDF} target="_blank" rel="noopener noreferrer" className={styles.download}>
             DOWNLOAD PDF <span>↓</span>
           </a>
         </div>
       </div>
-      <iframe title="Essence Interiors portfolio" src={`${PDF}#view=FitH`} className={styles.viewer} />
+      <PortfolioViewer />
       <Footer />
     </div>
   );
