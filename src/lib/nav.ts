@@ -1,18 +1,53 @@
-export type NavItem = {
-  label: string;
-  href: string;
-};
+export type NavChild = { label: string; href: string; icon?: string };
+export type NavItem = { label: string; href: string; chevron?: boolean; children?: NavChild[] };
 
 export const NAV_ITEMS: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Why Essence", href: "/why-essence-interiors" },
-  { label: "Projects", href: "/projects" },
+  {
+    label: "Projects",
+    href: "/projects",
+    chevron: true,
+    children: [
+      { label: "Residential Projects", href: "/projects?cat=Residential#grid", icon: "home" },
+      { label: "Commercial Projects", href: "/projects?cat=Commercial#grid", icon: "apartment" },
+      { label: "Hospitality Projects", href: "/projects?cat=Hospitality#grid", icon: "weekend" },
+      { label: "Featured Projects", href: "/projects", icon: "diamond" },
+    ],
+  },
   { label: "Gallery", href: "/gallery" },
   { label: "Portfolio", href: "/portfolio" },
-  { label: "Services", href: "/services" },
+  {
+    label: "Services",
+    href: "/services",
+    chevron: true,
+    children: [
+      { label: "Residential Interiors", href: "/residential-interiors" },
+      { label: "Luxury Villas", href: "/luxury-villas" },
+      { label: "Modular Kitchens", href: "/modular-kitchens" },
+      { label: "Commercial Interiors", href: "/commercial-interiors" },
+      { label: "Turnkey Projects", href: "/turnkey-projects" },
+    ],
+  },
+  {
+    label: "More",
+    href: "/design-process",
+    chevron: true,
+    children: [
+      { label: "Design Process", href: "/design-process" },
+      { label: "Materials & Finishes", href: "/materials-finishes" },
+      { label: "Videos", href: "/inspiration/videos" },
+    ],
+  },
   { label: "Contact", href: "/contact" },
 ];
+
+export function isNavActive(item: NavItem, pathname: string) {
+  if (item.href === "/") return pathname === "/";
+  const paths = [item.href, ...(item.children?.map((c) => c.href.split("?")[0]) ?? [])];
+  return paths.some((p) => pathname === p || pathname.startsWith(`${p}/`));
+}
 
 export function headerOffset() {
   if (typeof window === "undefined") return 88;

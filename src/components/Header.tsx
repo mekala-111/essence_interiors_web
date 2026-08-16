@@ -2,16 +2,16 @@
 
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { usePathname, useRouter } from "next/navigation";
-import AppLink from "./AppLink";
-import { NAV_ITEMS, goTo } from "@/lib/nav";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { NAV_ITEMS, isNavActive } from "@/lib/nav";
 import styles from "./Header.module.css";
 
 export default function Header({ forceSolid = false }: { forceSolid?: boolean }) {
   const pathname = usePathname();
-  const router = useRouter();
   const [scrolledState, setScrolledState] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileExpanded, setMobileExpanded] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
     setMobileOpen(false);
@@ -33,11 +33,6 @@ export default function Header({ forceSolid = false }: { forceSolid?: boolean })
 
   const scrolled = scrolledState || forceSolid || pathname !== "/";
 
-  function isActive(href: string) {
-    if (href === "/") return pathname === "/";
-    return pathname === href || pathname.startsWith(`${href}/`);
-  }
-
   const menu = mobileOpen ? (
     <>
       <div className={styles.overlay} onClick={() => setMobileOpen(false)} />
@@ -45,29 +40,50 @@ export default function Header({ forceSolid = false }: { forceSolid?: boolean })
         <button aria-label="Close menu" onClick={() => setMobileOpen(false)} className={styles.mobileClose}>
           &times;
         </button>
-        {NAV_ITEMS.map((item) => (
-          <button
-            key={item.label}
-            type="button"
-            className={`${styles.mobileLink} ${isActive(item.href) ? styles.mobileLinkActive : ""}`}
-            onClick={() => {
-              setMobileOpen(false);
-              goTo(item.href, (url) => router.push(url));
-            }}
-          >
-            {item.label}
-          </button>
-        ))}
-        <button
-          type="button"
-          className={styles.mobileCta}
-          onClick={() => {
-            setMobileOpen(false);
-            goTo("/book-consultation", (url) => router.push(url));
-          }}
-        >
+        {NAV_ITEMS.map((item) => {
+          const hasChildren = !!item.children;
+          const expanded = !!mobileExpanded[item.label];
+          return (
+            <div key={item.label} className={styles.mobileItem}>
+              <div className={styles.mobileItemRow}>
+                <Link
+                  href={item.href}
+                  onClick={() => setMobileOpen(false)}
+                  className={`${styles.mobileLink} ${isNavActive(item, pathname) ? styles.mobileLinkActive : ""}`}
+                >
+                  {item.label}
+                </Link>
+                {hasChildren ? (
+                  <button
+                    type="button"
+                    aria-label={expanded ? "Collapse" : "Expand"}
+                    className={styles.mobileToggle}
+                    onClick={() => setMobileExpanded((s) => ({ ...s, [item.label]: !s[item.label] }))}
+                  >
+                    {expanded ? "−" : "+"}
+                  </button>
+                ) : null}
+              </div>
+              {hasChildren && expanded ? (
+                <div className={styles.mobileSubList}>
+                  {item.children!.map((child) => (
+                    <Link
+                      key={child.label}
+                      href={child.href}
+                      onClick={() => setMobileOpen(false)}
+                      className={styles.mobileSubLink}
+                    >
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              ) : null}
+            </div>
+          );
+        })}
+        <Link href="/book-consultation" onClick={() => setMobileOpen(false)} className={styles.mobileCta}>
           BOOK CONSULTATION
-        </button>
+        </Link>
       </nav>
     </>
   ) : null;
@@ -76,27 +92,44 @@ export default function Header({ forceSolid = false }: { forceSolid?: boolean })
     <>
       <header className={`${styles.header} ${scrolled ? styles.headerSolid : ""}`}>
         <div className={styles.bar}>
-          <AppLink href="/" className={styles.logoLink}>
+          <Link href="/" className={styles.logoLink}>
             <div className={scrolled ? styles.logoPlate : styles.logoBare}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/images/essence-interiors-hyderabad-logo.png" alt="Essence Interiors" className={styles.logo} />
             </div>
-          </AppLink>
+          </Link>
 
           <nav className={styles.nav}>
-            {NAV_ITEMS.map((item) => (
-              <div key={item.label} className={styles.navItem}>
-                <AppLink href={item.href} className={`${styles.navLink} ${isActive(item.href) ? styles.navLinkActive : ""}`}>
-                  {item.label}
-                </AppLink>
-              </div>
-            ))}
+            {NAV_ITEMS.map((item) => {
+              const active = isNavActive(item, pathname);
+              return (
+                <div key={item.label} className={styles.navItem}>
+                  <Link href={item.href} className={`${styles.navLink} ${active ? styles.navLinkActive : ""}`}>
+                    {item.label}
+                    {item.chevron ? <span className={`ei-icon ${styles.navChevron}`}>expand_more</span> : null}
+                  </Link>
+                  {item.children ? (
+                    <div className={styles.dropdown}>
+                      {item.children.map((child) => (
+                        <Link key={child.label} href={child.href} className={styles.dropdownLink}>
+                          {child.icon ? <span className={`ei-icon ${styles.dropdownIcon}`}>{child.icon}</span> : null}
+                          <span className={styles.dropdownLabel}>{child.label}</span>
+                          <span className={styles.dropdownArrow} aria-hidden>
+                            ›
+                          </span>
+                        </Link>
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
+              );
+            })}
           </nav>
 
           <div className={styles.actions}>
-            <AppLink href="/book-consultation" className={styles.cta}>
+            <Link href="/book-consultation" className={styles.cta}>
               BOOK CONSULTATION
-            </AppLink>
+            </Link>
             <button aria-label="Open menu" onClick={() => setMobileOpen(true)} className={styles.hamburger}>
               <div className={styles.hamburgerLine} />
               <div className={styles.hamburgerLine} />
