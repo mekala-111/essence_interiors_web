@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import AppLink from "./AppLink";
 import YouTubeShowcase from "./YouTubeShowcase";
 import { fetchChannelVideos } from "@/lib/videos";
 import styles from "./Footer.module.css";
@@ -55,9 +54,9 @@ export default async function Footer({ hideShowcase = false }: { hideShowcase?: 
             <h4 className={styles.heading}>Company</h4>
             <div className={styles.linkList}>
               {COMPANY_LINKS.map((link) => (
-                <AppLink key={link.label} href={link.href} className={styles.link}>
+                <Link key={link.label} href={link.href} className={styles.link}>
                   {link.label}
-                </AppLink>
+                </Link>
               ))}
             </div>
           </div>

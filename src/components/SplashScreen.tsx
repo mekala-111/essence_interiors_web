@@ -6,7 +6,7 @@ import styles from "./SplashScreen.module.css";
 
 export default function SplashScreen() {
   const pathname = usePathname();
-  const [phase, setPhase] = useState<"in" | "out" | "done">("in");
+  const [phase, setPhase] = useState<"in" | "out" | "done">(pathname === "/" ? "in" : "done");
 
   useEffect(() => {
     if (pathname !== "/") {

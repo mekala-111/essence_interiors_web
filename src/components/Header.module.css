@@ -12,7 +12,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 500;
   transition:
     background 0.35s ease,
     box-shadow 0.35s ease;
@@ -264,7 +264,7 @@
   position: fixed;
   inset: 0;
   background: rgba(8, 20, 14, 0.55);
-  z-index: 399;
+  z-index: 590;
 }
 
 .mobilePanel {
@@ -274,7 +274,7 @@
   height: 100dvh;
   width: min(320px, 84vw);
   background: #082b1d;
-  z-index: 400;
+  z-index: 600;
   padding: 24px 0 32px;
   display: flex;
   flex-direction: column;

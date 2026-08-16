@@ -46,29 +46,23 @@ export default function Header({ forceSolid = false }: { forceSolid?: boolean })
           return (
             <div key={item.label} className={styles.mobileItem}>
               <div className={styles.mobileItemRow}>
-                {hasChildren ? (
-                  <button
-                    type="button"
-                    onClick={() => setMobileExpanded((s) => ({ ...s, [item.label]: !s[item.label] }))}
-                    className={`${styles.mobileLink} ${styles.mobileParent} ${isNavActive(item, pathname) ? styles.mobileLinkActive : ""}`}
-                  >
-                    {item.label}
-                  </button>
-                ) : (
-                  <Link
-                    href={item.href}
-                    onClick={() => setMobileOpen(false)}
-                    className={`${styles.mobileLink} ${isNavActive(item, pathname) ? styles.mobileLinkActive : ""}`}
-                  >
-                    {item.label}
-                  </Link>
-                )}
+                <Link
+                  href={item.href}
+                  onClick={() => setMobileOpen(false)}
+                  className={`${styles.mobileLink} ${isNavActive(item, pathname) ? styles.mobileLinkActive : ""}`}
+                >
+                  {item.label}
+                </Link>
                 {hasChildren ? (
                   <button
                     type="button"
                     aria-label={expanded ? "Collapse" : "Expand"}
                     className={styles.mobileToggle}
-                    onClick={() => setMobileExpanded((s) => ({ ...s, [item.label]: !s[item.label] }))}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setMobileExpanded((s) => ({ ...s, [item.label]: !s[item.label] }));
+                    }}
                   >
                     <span className={`ei-icon ${styles.toggleIcon}`}>
                       {expanded ? "expand_less" : "expand_more"}
