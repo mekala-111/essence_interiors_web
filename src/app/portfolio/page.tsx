@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PortfolioViewer, { PDF } from "./PortfolioViewer";
 import styles from "./page.module.css";
@@ -41,7 +40,6 @@ export const metadata: Metadata = {
 export default function PortfolioPage() {
   return (
     <div className={styles.page}>
-      <Header forceSolid />
       <div className={styles.bar}>
         <div className={styles.barInner}>
           <div>

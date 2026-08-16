@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { PROJECTS, getProjectBySlug, getRelatedProjects } from "@/lib/projects";
 import styles from "./page.module.css";
@@ -35,7 +34,6 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
 
   return (
     <div className={styles.page}>
-      <Header />
 
       <section className={styles.hero}>
         <div className={styles.heroBg} />

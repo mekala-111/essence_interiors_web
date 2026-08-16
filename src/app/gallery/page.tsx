@@ -1,7 +1,6 @@
 import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import type { Metadata } from "next";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GalleryView, { type GalleryPhoto } from "./GalleryView";
 
@@ -116,7 +115,6 @@ export default async function GalleryPage() {
 
   return (
     <div>
-      <Header forceSolid />
       <GalleryView photos={photos} />
       <Footer />
     </div>

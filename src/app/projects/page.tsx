@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { PROJECTS } from "@/lib/projects";
 import ProjectsFilterGrid from "./ProjectsFilterGrid";
@@ -29,7 +28,6 @@ export default async function ProjectsPage({
 
   return (
     <div className={styles.page}>
-      <Header forceSolid />
 
       <section className={styles.hero}>
         <div className={styles.heroBg} />

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import styles from "./page.module.css";
 
@@ -48,7 +47,6 @@ const EXAMPLES = [
 export default function ResidentialInteriorsPage() {
   return (
     <div className={styles.page}>
-      <Header />
 
       <section className={styles.hero}>
         <div className={styles.heroBg} />

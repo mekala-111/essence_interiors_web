@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import styles from "./LegalDoc.module.css";
 
@@ -15,7 +14,6 @@ export default function LegalDoc({
 }) {
   return (
     <div className={styles.page}>
-      <Header forceSolid />
       <article className={styles.wrap}>
         <p className={styles.breadcrumb}>
           <Link href="/">HOME</Link> / <span className={styles.current}>{crumb}</span>

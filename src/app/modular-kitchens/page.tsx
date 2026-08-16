@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import styles from "./page.module.css";
 
@@ -26,7 +25,6 @@ const GALLERY_RATIOS = ["4/3", "3/4", "1/1", "4/3", "3/4", "4/3"];
 export default function ModularKitchensPage() {
   return (
     <div className={styles.page}>
-      <Header />
 
       <section className={styles.hero}>
         <div className={styles.heroBg} />

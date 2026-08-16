@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Outfit } from "next/font/google";
+import Header from "@/components/Header";
 import SideRail from "@/components/SideRail";
 import SplashScreen from "@/components/SplashScreen";
 import "./globals.css";
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en" className={`${playfair.variable} ${outfit.variable}`}>
       <body style={{ fontFamily: "var(--font-body), sans-serif" }}>
         <SplashScreen />
+        <Header />
         {children}
         <SideRail />
       </body>

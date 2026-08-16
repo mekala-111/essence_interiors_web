@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { VideoCards } from "@/components/YouTubeShowcase";
 import { fetchChannelVideos } from "@/lib/videos";
@@ -17,7 +16,6 @@ export default async function VideosPage() {
 
   return (
     <div className={styles.page}>
-      <Header forceSolid />
       <section className={styles.hero}>
         <div className={styles.breadcrumb}>
           <Link href="/">HOME</Link> / <span className={styles.current}>VIDEOS</span>

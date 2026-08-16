@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AppLink from "@/components/AppLink";
 import Reveal from "@/components/Reveal";
@@ -184,7 +183,6 @@ const INSPIRATIONS = [
 export default function HomePage() {
   return (
     <div className={styles.page}>
-      <Header />
 
       <section id="home" className={styles.hero}>
         <HeroBg />

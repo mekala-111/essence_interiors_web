@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ConsultationForm from "./ConsultationForm";
 import styles from "./page.module.css";
@@ -62,7 +61,6 @@ const INFO_BLOCKS = [
 export default function BookConsultationPage() {
   return (
     <div style={{ background: "#FAF8F3", color: "#20231F", overflowX: "hidden" }}>
-      <Header forceSolid />
 
       <section className={styles.hero}>
         <div className={styles.heroImage} />
