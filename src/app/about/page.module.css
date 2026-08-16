@@ -1,0 +1,300 @@
+.page {
+  font-family: var(--font-body), sans-serif;
+  background: #faf8f3;
+  color: #20231f;
+  overflow-x: hidden;
+}
+
+.breadcrumb {
+  font-size: 12px;
+  color: #8a8272;
+  margin-bottom: 24px;
+}
+
+.breadcrumb a {
+  color: #8a8272;
+  text-decoration: none;
+}
+
+.breadcrumbCurrent {
+  color: #b8863b;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  max-width: 1360px;
+  margin: 120px auto 0;
+  padding: 0 32px;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.heroTitle {
+  font-family: var(--font-display), serif;
+  font-size: clamp(38px, 5vw, 60px);
+  font-weight: 700;
+  color: #082b1d;
+  margin: 0 0 12px;
+}
+
+.heroDivider {
+  width: 36px;
+  height: 2px;
+  background: #b8863b;
+  margin: 0 0 20px;
+}
+
+.heroTagline {
+  color: #b8863b;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+
+.heroLede {
+  color: #454940;
+  font-size: 15px;
+  line-height: 1.75;
+  margin: 0 0 28px;
+  max-width: 420px;
+}
+
+.darkCta {
+  background: #082b1d;
+  color: #faf8f3;
+  text-decoration: none;
+  padding: 14px 24px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.heroImg {
+  background: var(--p12) center/cover no-repeat;
+  aspect-ratio: 16 / 10;
+}
+
+/* ---------- Philosophy / Journey ---------- */
+
+.journey {
+  max-width: 1360px;
+  margin: 100px auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr 0.7fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.journeyImg {
+  background: var(--p13) center/cover no-repeat;
+  aspect-ratio: 4 / 5;
+}
+
+.eyebrow {
+  color: #b8863b;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+
+.journeyHeading {
+  font-family: var(--font-display), serif;
+  font-weight: 700;
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1.2;
+  color: #082b1d;
+  margin: 0 0 20px;
+}
+
+.journeyText {
+  color: #454940;
+  font-size: 15px;
+  line-height: 1.75;
+  margin: 0 0 18px;
+}
+
+.journeyPoints {
+  border-left: 1px solid #ede4d0;
+  padding-left: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.journeyPoint {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.journeyPoint span {
+  color: #b8863b;
+  font-size: 26px;
+  flex-shrink: 0;
+}
+
+.journeyPointText {
+  color: #082b1d;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* ---------- Values ---------- */
+
+.valuesSection {
+  background: #f2ebdd;
+  padding: 100px 32px;
+}
+
+.valuesHead {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 64px;
+}
+
+.valuesHeadRule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 0 24px;
+}
+
+.valuesHeading {
+  font-family: var(--font-display), serif;
+  font-weight: 700;
+  font-size: clamp(28px, 3.4vw, 42px);
+  line-height: 1.2;
+  color: #082b1d;
+  margin: 0;
+}
+
+.valuesGrid {
+  max-width: 1360px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.valueCell {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.valueCell + .valueCell {
+  border-left: 1px solid #e4dcc9;
+}
+
+.valueIcon {
+  color: #082b1d;
+  display: block;
+  margin: 0 0 18px;
+  font-size: 32px;
+}
+
+.valueTitle {
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #082b1d;
+  margin: 0 0 12px;
+  font-weight: 600;
+}
+
+.valueDesc {
+  color: #5a5f57;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---------- Stats ---------- */
+
+.statsSection {
+  background: #082b1d;
+  padding: 56px 32px;
+}
+
+.statsGrid {
+  max-width: 1360px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.statCell {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.statValue {
+  font-family: var(--font-display), serif;
+  color: #faf8f3;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.statLabel {
+  color: rgba(242, 235, 221, 0.6);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .hero,
+  .journey,
+  .valuesSection,
+  .statsSection {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .heroGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroImg {
+    display: none;
+  }
+
+  .journey {
+    grid-template-columns: 1fr;
+  }
+
+  .journeyPoints {
+    display: none;
+  }
+
+  .valuesGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .valueCell:nth-child(odd) {
+    border-left: none;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

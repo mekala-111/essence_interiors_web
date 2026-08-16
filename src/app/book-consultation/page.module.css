@@ -1,0 +1,274 @@
+.hero {
+  position: relative;
+  margin-top: 88px;
+  min-height: 780px;
+  display: flex;
+  align-items: center;
+}
+
+.heroImage {
+  position: absolute;
+  inset: 0;
+  background: var(--p14) center/cover no-repeat;
+}
+
+.heroGradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #faf8f3 0%,
+    #faf8f3 42%,
+    rgba(250, 248, 243, 0.55) 60%,
+    transparent 80%
+  );
+}
+
+.heroInner {
+  position: relative;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 64px 32px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.72fr 1.28fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.breadcrumb {
+  font-size: 12px;
+  color: #8a8272;
+  margin-bottom: 22px;
+  letter-spacing: 0.04em;
+}
+
+.breadcrumb a {
+  color: #8a8272;
+  text-decoration: none;
+}
+
+.breadcrumbCurrent {
+  color: #b8863b;
+}
+
+.title {
+  font-family: var(--font-display), serif;
+  font-size: clamp(36px, 4.6vw, 54px);
+  font-weight: 700;
+  line-height: 1.05;
+  color: #082b1d;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+}
+
+.titleDivider {
+  width: 36px;
+  height: 2px;
+  background: #b8863b;
+  margin: 0 0 22px;
+}
+
+.subhead {
+  color: #b8863b;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+
+.lede {
+  color: #454940;
+  font-size: 14px;
+  line-height: 1.75;
+  margin: 0 0 36px;
+  max-width: 400px;
+}
+
+.perksGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 44px;
+}
+
+.perkIcon {
+  color: #b8863b;
+  font-size: 26px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.perkTitle {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #082b1d;
+  margin: 0 0 6px;
+  line-height: 1.3;
+}
+
+.perkDesc {
+  color: #5a5f57;
+  font-size: 12.5px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.quoteBox {
+  background: #082b1d;
+  padding: 26px 28px;
+  max-width: 400px;
+}
+
+.quoteText {
+  font-family: var(--font-display), serif;
+  color: #f2ebdd;
+  font-size: 19px;
+  line-height: 1.35;
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+.quoteText em {
+  color: #d2aa68;
+  font-style: italic;
+}
+
+.quoteSub {
+  color: rgba(242, 235, 221, 0.65);
+  font-size: 12.5px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.formCard {
+  background: #ffffff;
+  padding: 44px 48px;
+  box-shadow: 0 30px 70px rgba(8, 43, 29, 0.15);
+}
+
+.formCardHeader {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.formIconCircle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #f2ebdd;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.formIconCircle span {
+  color: #b8863b;
+  font-size: 28px;
+}
+
+.formTitle {
+  font-family: var(--font-display), serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #082b1d;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+
+.formTitleDivider {
+  width: 32px;
+  height: 2px;
+  background: #b8863b;
+  margin: 0 auto 14px;
+}
+
+.formSubtext {
+  color: #5a5f57;
+  font-size: 13.5px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.infoSection {
+  max-width: 1360px;
+  margin: 0 auto 90px;
+  padding: 0 32px;
+}
+
+.infoGrid {
+  background: #f2ebdd;
+  border-radius: 6px;
+  padding: 36px 44px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.infoItem {
+  display: flex;
+  gap: 14px;
+  min-width: 0;
+}
+
+.infoText {
+  flex: 1;
+  min-width: 0;
+}
+
+.infoIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #082b1d;
+  color: #d2aa68;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.infoTitle {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #082b1d;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.infoLine {
+  color: #5a5f57;
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    margin-top: 88px;
+    min-height: auto;
+    padding: 32px 0;
+    background: #faf8f3;
+  }
+  .heroImage,
+  .heroGradient,
+  .quoteBox {
+    display: none;
+  }
+  .heroInner {
+    grid-template-columns: 1fr;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .infoSection {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .infoGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

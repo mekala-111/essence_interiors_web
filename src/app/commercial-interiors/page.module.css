@@ -1,0 +1,223 @@
+.page {
+  font-family: var(--font-body), sans-serif;
+  background: #faf8f3;
+  color: #20231f;
+  overflow-x: hidden;
+}
+
+.hero {
+  position: relative;
+  height: 52vh;
+  min-height: 380px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.heroBg {
+  background: var(--p15) center/cover no-repeat;
+  position: absolute;
+  inset: 0;
+}
+
+.heroGradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5, 20, 14, 0.4) 0%, rgba(8, 43, 29, 0.9) 100%);
+}
+
+.heroInner {
+  position: relative;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 32px 56px;
+  width: 100%;
+}
+
+.heroEyebrow {
+  color: #d2aa68;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin: 0 0 16px;
+  font-weight: 600;
+}
+
+.heroTitle {
+  font-family: var(--font-display), serif;
+  color: #faf8f3;
+  font-size: clamp(32px, 5vw, 54px);
+  margin: 0;
+  font-weight: 700;
+}
+
+.introHeading {
+  font-family: var(--font-display), serif;
+  font-weight: 700;
+  font-size: clamp(28px, 3.4vw, 42px);
+  color: #082b1d;
+  margin: 0 0 20px;
+}
+
+.introText {
+  color: #454940;
+  font-size: 15px;
+  line-height: 1.75;
+  margin: 0 0 18px;
+  max-width: 920px;
+}
+
+.segmentsSection {
+  max-width: 1360px;
+  margin: 100px auto;
+  padding: 0 32px;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.split .introText {
+  max-width: none;
+}
+
+.splitImgs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.splitImg {
+  background: var(--p16) center/cover no-repeat;
+  aspect-ratio: 4 / 3;
+}
+
+.splitImg + .splitImg {
+  background: var(--p17) center/cover no-repeat;
+}
+
+.segmentsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.segmentImg {
+  background: var(--p16) center/cover no-repeat;
+  aspect-ratio: 4 / 3;
+  margin-bottom: 14px;
+}
+
+.segmentsGrid > :nth-child(2) .segmentImg {
+  background: var(--p17) center/cover no-repeat;
+}
+.segmentsGrid > :nth-child(3) .segmentImg {
+  background: var(--p18) center/cover no-repeat;
+}
+.segmentsGrid > :nth-child(4) .segmentImg {
+  background: var(--p19) center/cover no-repeat;
+}
+.segmentsGrid > :nth-child(5) .segmentImg {
+  background: var(--p20) center/cover no-repeat;
+}
+.segmentsGrid > :nth-child(6) .segmentImg {
+  background: var(--p21) center/cover no-repeat;
+}
+
+.segmentName {
+  font-family: var(--font-display), serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #082b1d;
+  margin: 0;
+}
+
+.examplesSection {
+  max-width: 1360px;
+  margin: 100px auto;
+  padding: 0 32px;
+}
+
+.examplesHead {
+  color: #b8863b;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0 0 32px;
+  text-align: center;
+}
+
+.examplesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.exampleCard {
+  text-decoration: none;
+  color: inherit;
+}
+
+.exampleImg {
+  background: var(--p22) center/cover no-repeat;
+  aspect-ratio: 4 / 3;
+  margin-bottom: 12px;
+}
+
+.examplesGrid > :nth-child(2) .exampleImg {
+  background: var(--p23) center/cover no-repeat;
+}
+.examplesGrid > :nth-child(3) .exampleImg {
+  background: var(--p24) center/cover no-repeat;
+}
+
+.exampleName {
+  font-family: var(--font-display), serif;
+  font-weight: 700;
+  font-size: 17px;
+  color: #082b1d;
+  margin: 0;
+}
+
+.ctaSection {
+  background: #f2ebdd;
+  padding: 80px 32px;
+  text-align: center;
+}
+
+.ctaHeading {
+  font-family: var(--font-display), serif;
+  font-weight: 700;
+  font-size: clamp(24px, 3vw, 34px);
+  color: #082b1d;
+  margin: 0 0 28px;
+}
+
+.ctaBtn {
+  background: #b8863b;
+  color: #faf8f3;
+  text-decoration: none;
+  padding: 17px 34px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  display: inline-block;
+}
+
+@media (max-width: 860px) {
+  .heroInner,
+  .segmentsSection,
+  .examplesSection {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .segmentsGrid,
+  .examplesGrid,
+  .split {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,197 @@
+.page {
+  font-family: var(--font-body), sans-serif;
+  background: #faf8f3;
+  color: #20231f;
+  overflow-x: hidden;
+}
+
+.hero {
+  position: relative;
+  height: 90vh;
+  min-height: 560px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.heroBg {
+  background: var(--p28) center/cover no-repeat;
+  position: absolute;
+  inset: 0;
+}
+
+.heroGradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5, 20, 14, 0.35) 0%, rgba(8, 43, 29, 0.92) 100%);
+}
+
+.heroInner {
+  position: relative;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 32px 72px;
+  width: 100%;
+}
+
+.heroEyebrow {
+  color: #d2aa68;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin: 0 0 16px;
+  font-weight: 600;
+}
+
+.heroTitle {
+  font-family: var(--font-display), serif;
+  color: #faf8f3;
+  font-size: clamp(36px, 6vw, 68px);
+  margin: 0 0 20px;
+  font-weight: 700;
+}
+
+.heroLede {
+  color: rgba(250, 248, 243, 0.85);
+  font-size: 17px;
+  max-width: 520px;
+  margin: 0;
+}
+
+.pillarsSection {
+  max-width: 1360px;
+  margin: 120px auto;
+  padding: 0 32px;
+}
+
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  background: #e4dcc9;
+}
+
+.pillarCard {
+  background: #faf8f3;
+  padding: 44px;
+}
+
+.pillarImg {
+  background: var(--p29) center/cover no-repeat;
+  aspect-ratio: 16 / 10;
+  margin-bottom: 24px;
+}
+
+.pillarsGrid > :nth-child(2) .pillarImg {
+  background: var(--p30) center/cover no-repeat;
+}
+.pillarsGrid > :nth-child(3) .pillarImg {
+  background: var(--p31) center/cover no-repeat;
+}
+.pillarsGrid > :nth-child(4) .pillarImg {
+  background: var(--p32) center/cover no-repeat;
+}
+.pillarsGrid > :nth-child(5) .pillarImg {
+  background: var(--p33) center/cover no-repeat;
+}
+.pillarsGrid > :nth-child(6) .pillarImg {
+  background: var(--p34) center/cover no-repeat;
+}
+
+.pillarTitle {
+  font-family: var(--font-display), serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #082b1d;
+  margin: 0 0 10px;
+}
+
+.pillarDesc {
+  color: #454940;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.examplesSection {
+  max-width: 1360px;
+  margin: 100px auto;
+  padding: 0 32px;
+}
+
+.examplesHead {
+  color: #b8863b;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0 0 32px;
+  text-align: center;
+}
+
+.examplesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.exampleCard {
+  text-decoration: none;
+  color: inherit;
+}
+
+.exampleImg {
+  background: var(--p35) center/cover no-repeat;
+  aspect-ratio: 16 / 10;
+  margin-bottom: 14px;
+}
+
+.examplesGrid > :nth-child(2) .exampleImg {
+  background: var(--p36) center/cover no-repeat;
+}
+
+.exampleName {
+  font-family: var(--font-display), serif;
+  font-weight: 700;
+  font-size: 19px;
+  color: #082b1d;
+  margin: 0;
+}
+
+.ctaSection {
+  background: #f2ebdd;
+  padding: 80px 32px;
+  text-align: center;
+}
+
+.ctaHeading {
+  font-family: var(--font-display), serif;
+  font-weight: 700;
+  font-size: clamp(24px, 3vw, 34px);
+  color: #082b1d;
+  margin: 0 0 28px;
+}
+
+.ctaBtn {
+  background: #b8863b;
+  color: #faf8f3;
+  text-decoration: none;
+  padding: 17px 34px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  display: inline-block;
+}
+
+@media (max-width: 860px) {
+  .heroInner,
+  .pillarsSection,
+  .examplesSection {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .pillarsGrid,
+  .examplesGrid {
+    grid-template-columns: 1fr;
+  }
+}

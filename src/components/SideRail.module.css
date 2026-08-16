@@ -1,0 +1,70 @@
+.rail {
+  position: fixed;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 90;
+  width: 92px;
+  background: rgba(20, 22, 20, 0.82);
+  backdrop-filter: blur(12px);
+  border: 1px solid #d2aa68;
+  border-radius: 22px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 22px 8px 18px;
+  text-decoration: none;
+  color: #faf8f3;
+  border-bottom: 1px solid #d2aa68;
+  transition: background 0.2s ease;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item:hover {
+  background: rgba(210, 170, 104, 0.12);
+}
+
+.icon {
+  color: #d2aa68;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+}
+
+.icon svg,
+.icon span {
+  width: 26px;
+  height: 26px;
+  font-size: 26px;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.underline {
+  width: 28px;
+  height: 1px;
+  background: #d2aa68;
+}
+
+@media (max-width: 860px) {
+  .rail {
+    display: none;
+  }
+}

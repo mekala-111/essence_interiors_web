@@ -1,0 +1,84 @@
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.input {
+  border: none;
+  border-bottom: 1px solid #d8cfba;
+  background: transparent;
+  padding: 12px 4px;
+  font-size: 14px;
+  font-family: var(--font-body), sans-serif;
+  color: #20231f;
+  outline: none;
+  width: 100%;
+}
+
+.input:focus {
+  border-bottom-color: #b8863b;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.submit {
+  grid-column: 1 / -1;
+  margin-top: 8px;
+  background: #b8863b;
+  color: #faf8f3;
+  border: none;
+  padding: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.submit:disabled {
+  background: #c9ab7a;
+  cursor: default;
+}
+
+.successBox {
+  background: #f2ebdd;
+  border-left: 3px solid #b8863b;
+  padding: 24px;
+  color: #082b1d;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.errorBox {
+  grid-column: 1 / -1;
+  background: #fbeceb;
+  border-left: 3px solid #b3261e;
+  padding: 14px 16px;
+  color: #7a271a;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.secondaryRow {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.secondaryCta {
+  flex: 1;
+  text-align: center;
+  border: 1px solid #082b1d;
+  color: #082b1d;
+  text-decoration: none;
+  padding: 13px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}

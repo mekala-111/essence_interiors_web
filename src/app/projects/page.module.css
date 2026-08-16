@@ -1,0 +1,202 @@
+.page {
+  font-family: var(--font-body), sans-serif;
+  background: #faf8f3;
+  color: #20231f;
+  overflow-x: hidden;
+}
+
+.hero {
+  position: relative;
+  min-height: 56vh;
+  display: flex;
+  align-items: flex-end;
+  margin-top: 88px;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background: var(--p6) center/cover no-repeat;
+}
+
+.heroGradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #faf8f3 0%, rgba(250, 248, 243, 0.7) 30%, transparent 55%);
+}
+
+.heroInner {
+  position: relative;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 56px 32px;
+  width: 100%;
+}
+
+.breadcrumb {
+  font-size: 12px;
+  color: #8a8272;
+  margin-bottom: 24px;
+}
+
+.breadcrumb a {
+  color: #8a8272;
+  text-decoration: none;
+}
+
+.breadcrumbCurrent {
+  color: #b8863b;
+}
+
+.heroTitle {
+  font-family: var(--font-display), serif;
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 700;
+  color: #082b1d;
+  margin: 0 0 12px;
+}
+
+.heroDivider {
+  width: 36px;
+  height: 2px;
+  background: #b8863b;
+  margin: 0 0 20px;
+}
+
+.heroTagline {
+  color: #b8863b;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+
+.heroLede {
+  color: #454940;
+  font-size: 15px;
+  line-height: 1.75;
+  margin: 0 0 28px;
+  max-width: 420px;
+}
+
+.darkCta {
+  background: #082b1d;
+  color: #faf8f3;
+  text-decoration: none;
+  padding: 14px 24px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.viewAllWrap {
+  max-width: 1360px;
+  margin: 56px auto 100px;
+  padding: 0 32px;
+  text-align: center;
+}
+
+.outlineCta {
+  border: 1px solid #b8863b;
+  color: #b8863b;
+  text-decoration: none;
+  padding: 14px 28px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.statsWrap {
+  max-width: 1360px;
+  margin: 0 auto 32px;
+  padding: 0 32px;
+}
+
+.statsBar {
+  background: #082b1d;
+  border-radius: 16px;
+  padding: 36px 48px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.statCell {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.statValue {
+  font-family: var(--font-display), serif;
+  color: #faf8f3;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.statLabel {
+  color: rgba(242, 235, 221, 0.6);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.ctaStripWrap {
+  max-width: 1360px;
+  margin: 0 auto 100px;
+  padding: 0 32px;
+}
+
+.ctaStrip {
+  border: 1px solid #ede4d0;
+  border-radius: 16px;
+  padding: 28px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.ctaStripLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.ctaStripEyebrow {
+  color: #8a8272;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0 0 4px;
+}
+
+.ctaStripHeading {
+  font-family: var(--font-display), serif;
+  color: #082b1d;
+  font-size: 19px;
+  font-weight: 700;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .heroInner,
+  .statsWrap,
+  .ctaStripWrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .statsBar {
+    grid-template-columns: 1fr 1fr;
+  }
+}
