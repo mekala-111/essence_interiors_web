@@ -30,6 +30,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${playfair.variable} ${outfit.variable}`}>
+      <head>
+        {/* eslint-disable-next-line @next/next/google-font-display, @next/next/no-page-custom-font */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body style={{ fontFamily: "var(--font-body), sans-serif" }}>
         <SplashScreen />
         <Header />

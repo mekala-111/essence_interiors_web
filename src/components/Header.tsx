@@ -43,16 +43,28 @@ export default function Header({ forceSolid = false }: { forceSolid?: boolean })
         {NAV_ITEMS.map((item) => {
           const hasChildren = !!item.children;
           const expanded = !!mobileExpanded[item.label];
+          const isActive = isNavActive(item, pathname);
           return (
             <div key={item.label} className={styles.mobileItem}>
               <div className={styles.mobileItemRow}>
-                <Link
-                  href={item.href}
-                  onClick={() => setMobileOpen(false)}
-                  className={`${styles.mobileLink} ${isNavActive(item, pathname) ? styles.mobileLinkActive : ""}`}
-                >
-                  {item.label}
-                </Link>
+                {hasChildren ? (
+                  <button
+                    type="button"
+                    onClick={() => setMobileExpanded((s) => ({ ...s, [item.label]: !s[item.label] }))}
+                    className={`${styles.mobileLink} ${styles.mobileParent} ${isActive ? styles.mobileLinkActive : ""}`}
+                    aria-expanded={expanded}
+                  >
+                    {item.label}
+                  </button>
+                ) : (
+                  <Link
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className={`${styles.mobileLink} ${isActive ? styles.mobileLinkActive : ""}`}
+                  >
+                    {item.label}
+                  </Link>
+                )}
                 {hasChildren ? (
                   <button
                     type="button"
