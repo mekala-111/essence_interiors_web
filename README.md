@@ -37,4 +37,4 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000) for `next dev`. Production (`npm start`) listens on port 6061.
