@@ -29,7 +29,7 @@ export default function PortfolioViewer() {
           alt="Essence Interiors portfolio"
           className={styles.cover}
         />
-        <p className={styles.fallbackCopy}>iPhone cannot show a PDF inside the page. Open it in Safari.</p>
+        <p className={styles.fallbackCopy}>This phone cannot show a PDF inside the page. Open it in your browser.</p>
         <a href={PDF} target="_blank" rel="noopener noreferrer" className={styles.download}>
           OPEN LOOKBOOK
         </a>

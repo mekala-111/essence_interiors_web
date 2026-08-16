@@ -102,6 +102,12 @@
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.heroCtaPrimary:hover {
+  background: #d2aa68;
 }
 
 .goldCta {
@@ -116,6 +122,12 @@
   align-items: center;
   gap: 10px;
   align-self: flex-start;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.goldCta:hover {
+  background: #d2aa68;
 }
 
 .heroCtaSecondary {
@@ -126,6 +138,13 @@
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.heroCtaSecondary:hover {
+  border-color: #d2aa68;
+  color: #d2aa68;
 }
 
 .scrollHint {
@@ -289,6 +308,12 @@
   letter-spacing: 0.06em;
   border-bottom: 1px solid #b8863b;
   padding-bottom: 4px;
+  cursor: pointer;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.textLink:hover {
+  color: #b8863b;
 }
 
 /* ---------- Crafted with intention ---------- */
@@ -331,6 +356,15 @@
 .intentionValue {
   text-align: center;
   padding: 0 28px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.intentionValue:hover {
+  transform: translateY(-4px);
 }
 
 .intentionValue + .intentionValue {
@@ -447,6 +481,7 @@
   overflow: hidden;
   text-decoration: none;
   display: block;
+  cursor: pointer;
 }
 
 .projectImg {
@@ -547,6 +582,13 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.outlineCta:hover {
+  background: #b8863b;
+  color: #faf8f3;
 }
 
 .diffImg {
@@ -571,6 +613,15 @@
   text-align: center;
   padding: 0 28px;
   min-width: 0;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.diffValue:hover {
+  transform: translateY(-4px);
 }
 
 .diffValue:not(:nth-child(3n + 1)) {
@@ -1041,6 +1092,9 @@
   break-inside: avoid;
   margin-bottom: 16px;
   overflow: hidden;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .galleryImg {

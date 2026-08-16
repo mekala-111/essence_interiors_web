@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AppLink from "@/components/AppLink";
 import Reveal from "@/components/Reveal";
 import ServicesAccordion from "./ServicesAccordion";
 import BeforeAfterSlider from "./BeforeAfterSlider";
@@ -204,12 +204,12 @@ export default function HomePage() {
             (garden, pool design) in Hyderabad.
           </p>
           <div className={styles.heroCtas}>
-            <a href="#projects" className={styles.heroCtaPrimary}>
+            <AppLink href="/#projects" className={styles.heroCtaPrimary}>
               EXPLORE PROJECTS
-            </a>
-            <a href="#consultation" className={styles.heroCtaSecondary}>
+            </AppLink>
+            <AppLink href="/#contact" className={styles.heroCtaSecondary}>
               BOOK A CONSULTATION
-            </a>
+            </AppLink>
           </div>
         </div>
         <div className={styles.scrollHint}>
@@ -256,9 +256,9 @@ export default function HomePage() {
               Hyderabad do not hesitate to expand our capabilities to bring out the unique environment to which you
               aspire.
             </p>
-            <Link href="/about" className={styles.textLink}>
+            <AppLink href="/#about" className={styles.textLink}>
               DISCOVER OUR STORY →
-            </Link>
+            </AppLink>
           </div>
         </div>
       </Reveal>
@@ -286,23 +286,23 @@ export default function HomePage() {
               more. We are the best interior designer Hyderabad will give complete interiors to your kitchen at an
               ideal cost.
             </p>
-            <Link href="/about" className={styles.goldCta}>
+            <AppLink href="/#why-us" className={styles.goldCta}>
               OUR DESIGN PHILOSOPHY <span>→</span>
-            </Link>
+            </AppLink>
           </div>
           <div className={styles.intentionImg} />
         </div>
         <div className={styles.intentionValuesWrap}>
           <div className={styles.intentionValues}>
             {INTENTION_VALUES.map((v) => (
-              <div key={v.title} className={styles.intentionValue}>
+              <AppLink key={v.title} href="/#why-us" className={styles.intentionValue}>
                 <div className={styles.valueCircle}>
                   <span className="ei-icon">{v.icon}</span>
                 </div>
                 <h3 className={styles.valueTitle}>{v.title}</h3>
                 <div className={styles.valueDivider} />
                 <p className={styles.valueDesc}>{v.desc}</p>
-              </div>
+              </AppLink>
             ))}
           </div>
         </div>
@@ -328,15 +328,15 @@ export default function HomePage() {
             <p className={styles.eyebrow}>Selected Work</p>
             <h2 className={styles.projectsHeading}>Spaces We&apos;ve Brought to Life.</h2>
           </div>
-          <Link href="/projects" className={styles.textLink} style={{ whiteSpace: "nowrap" }}>
+          <AppLink href="/#projects" className={styles.textLink} style={{ whiteSpace: "nowrap" }}>
             VIEW ALL PROJECTS →
-          </Link>
+          </AppLink>
         </div>
         <div className={styles.projectsGrid}>
           {PROJECTS.map((p) => (
-            <Link
+            <AppLink
               key={p.name}
-              href="/projects"
+              href="/#projects"
               className={styles.projectCell}
               style={{ gridColumn: p.col, gridRow: p.row }}
             >
@@ -349,12 +349,12 @@ export default function HomePage() {
                 <h3 className={styles.projectName}>{p.name}</h3>
                 <span className={styles.projectLink}>View Project →</span>
               </div>
-            </Link>
+            </AppLink>
           ))}
         </div>
       </Reveal>
 
-      <Reveal as="section" aria-label="The Essence Difference">
+      <Reveal as="section" id="why-us" aria-label="The Essence Difference">
         <div className={styles.diffSplit}>
           <div className={styles.diffCopy}>
             <p className={styles.eyebrow} style={{ marginBottom: 16 }}>
@@ -374,23 +374,23 @@ export default function HomePage() {
               CH. Sudheera, one of the best interior designers in Hyderabad offers in-depth consultation
               and comprehensive theme-based solution at affordable price in its class.
             </p>
-            <Link href="/about" className={styles.outlineCta}>
+            <AppLink href="/#why-us" className={styles.outlineCta}>
               DISCOVER THE DIFFERENCE <span>→</span>
-            </Link>
+            </AppLink>
           </div>
           <div className={styles.diffImg} />
         </div>
         <div className={styles.diffValuesWrap}>
           <div className={styles.diffValues}>
             {DIFFERENCE_VALUES.map((d) => (
-              <div key={d.title} className={styles.diffValue}>
+              <AppLink key={d.title} href="/#why-us" className={styles.diffValue}>
                 <span className="ei-icon" style={{ color: "#B8863B", display: "block", marginBottom: 16, fontSize: 34 }}>
                   {d.icon}
                 </span>
                 <h3 className={styles.diffValueTitle}>{d.title}</h3>
                 <div className={styles.diffValueDivider} />
                 <p className={styles.diffValueDesc}>{d.desc}</p>
-              </div>
+              </AppLink>
             ))}
           </div>
         </div>
@@ -461,9 +461,9 @@ export default function HomePage() {
                 <span className={styles.trustPointLabel}>{t.label}</span>
               </div>
             ))}
-            <Link href="/materials-finishes" className={styles.trustPointsCta}>
+            <AppLink href="/materials-finishes" className={styles.trustPointsCta}>
               EXPLORE MATERIALS <span>→</span>
-            </Link>
+            </AppLink>
           </div>
         </div>
       </Reveal>
@@ -505,9 +505,9 @@ export default function HomePage() {
           ))}
         </div>
         <div className={styles.processCtaWrap}>
-          <Link href="/book-consultation" className={styles.processCta}>
+          <AppLink href="/book-consultation" className={styles.processCta}>
             BOOK A CONSULTATION <span>→</span>
-          </Link>
+          </AppLink>
         </div>
         <div className={styles.processFooterRule}>
           <span />
@@ -523,9 +523,9 @@ export default function HomePage() {
         </div>
         <BeforeAfterSlider />
         <div className={styles.baLinkWrap}>
-          <a href="#gallery" className={styles.textLink}>
+          <AppLink href="/gallery" className={styles.textLink}>
             VIEW MORE TRANSFORMATIONS →
-          </a>
+          </AppLink>
         </div>
       </Reveal>
 
@@ -536,11 +536,11 @@ export default function HomePage() {
         </div>
         <div className={styles.galleryMasonry}>
           {INSPIRATIONS.map((ins) => (
-            <div key={ins.name} className={styles.galleryItem}>
+            <AppLink key={ins.name} href="/gallery" className={styles.galleryItem}>
               <div className={styles.galleryImg} style={{ aspectRatio: ins.ratio }} />
               <div className={styles.galleryShade} />
               <p className={styles.galleryLabel}>{ins.name}</p>
-            </div>
+            </AppLink>
           ))}
         </div>
       </Reveal>
@@ -549,7 +549,7 @@ export default function HomePage() {
         <TestimonialsSection />
       </Reveal>
 
-      <Reveal as="section" id="consultation" className={styles.consultSection}>
+      <Reveal as="section" id="contact" className={styles.consultSection}>
         <div className={styles.consultGrid}>
           <div className={styles.consultImg} />
           <div className={styles.consultForm}>
@@ -568,9 +568,9 @@ export default function HomePage() {
         <a href="https://wa.me/919666199943" className={styles.stickyLink}>
           WHATSAPP
         </a>
-        <a href="#consultation" className={`${styles.stickyLink} ${styles.stickyQuote}`}>
+        <AppLink href="/#contact" className={`${styles.stickyLink} ${styles.stickyQuote}`}>
           GET QUOTE
-        </a>
+        </AppLink>
       </div>
     </div>
   );

@@ -66,7 +66,7 @@
 .nav {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 16px;
 }
 
 .navItem {
@@ -83,7 +83,8 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #ffffff;
-  transition: color 0.25s ease;
+  cursor: pointer;
+  transition: color 0.35s cubic-bezier(0.2, 0.7, 0.3, 1);
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
@@ -106,7 +107,7 @@
   background: #d2aa68;
   box-shadow: 0 0 10px 1px rgba(210, 170, 104, 0.85);
   transform: translateX(-50%);
-  transition: width 0.2s ease;
+  transition: width 0.35s cubic-bezier(0.2, 0.7, 0.3, 1);
 }
 
 .navLinkActive,
@@ -304,6 +305,32 @@
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.04em;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+  transition: color 0.35s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.mobileLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #d2aa68;
+  transition: width 0.35s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.mobileLink:hover,
+.mobileLinkActive {
+  color: #d2aa68;
+}
+
+.mobileLinkActive::after,
+.mobileLink:hover::after {
+  width: 100%;
 }
 
 .mobileToggle {

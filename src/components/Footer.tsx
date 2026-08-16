@@ -1,16 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
+import AppLink from "./AppLink";
 import YouTubeShowcase from "./YouTubeShowcase";
 import { fetchChannelVideos } from "@/lib/videos";
 import styles from "./Footer.module.css";
 
 const COMPANY_LINKS = [
-  { label: "About", href: "/about" },
-  { label: "Why Essence", href: "/why-essence-interiors" },
-  { label: "Projects", href: "/projects" },
+  { label: "About", href: "/#about" },
+  { label: "Why Essence", href: "/#why-us" },
+  { label: "Projects", href: "/#projects" },
   { label: "Gallery", href: "/gallery" },
   { label: "Portfolio", href: "/portfolio" },
-  { label: "Contact", href: "/contact" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const SERVICE_LINKS = [
@@ -54,9 +55,9 @@ export default async function Footer({ hideShowcase = false }: { hideShowcase?: 
             <h4 className={styles.heading}>Company</h4>
             <div className={styles.linkList}>
               {COMPANY_LINKS.map((link) => (
-                <Link key={link.label} href={link.href} className={styles.link}>
+                <AppLink key={link.label} href={link.href} className={styles.link}>
                   {link.label}
-                </Link>
+                </AppLink>
               ))}
             </div>
           </div>
