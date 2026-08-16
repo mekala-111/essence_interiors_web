@@ -1,17 +1,25 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import styles from "./SplashScreen.module.css";
 
 export default function SplashScreen() {
+  const pathname = usePathname();
   const [phase, setPhase] = useState<"in" | "out" | "done">("in");
 
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (pathname !== "/") {
       setPhase("done");
       return;
     }
 
+    if (sessionStorage.getItem("ei-splash") || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setPhase("done");
+      return;
+    }
+
+    sessionStorage.setItem("ei-splash", "1");
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
 
@@ -26,9 +34,9 @@ export default function SplashScreen() {
       window.clearTimeout(hide);
       document.body.style.overflow = prev;
     };
-  }, []);
+  }, [pathname]);
 
-  if (phase === "done") return null;
+  if (pathname !== "/" || phase === "done") return null;
 
   return (
     <div

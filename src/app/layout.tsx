@@ -29,15 +29,6 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${playfair.variable} ${outfit.variable}`}>
-      <head>
-        {/* Material Symbols is a glyph font, not text — loaded with display=swap to avoid
-            preload warnings while still preventing fallback flash. Fonts are auto-optimized by Next.js. */}
-        {/* eslint-disable-next-line @next/next/google-font-display, @next/next/no-page-custom-font */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap"
-          rel="stylesheet"
-        />
-      </head>
       <body style={{ fontFamily: "var(--font-body), sans-serif" }}>
         <SplashScreen />
         {children}
