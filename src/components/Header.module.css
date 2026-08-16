@@ -73,7 +73,7 @@
   position: relative;
   height: 88px;
   display: flex;
-  align-items: center;
+  align-items: stretch;
 }
 
 .navLink {
@@ -86,11 +86,11 @@
   cursor: pointer;
   transition: color 0.35s cubic-bezier(0.2, 0.7, 0.3, 1);
   white-space: nowrap;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 4px;
+  height: 100%;
+  padding: 0 8px;
   position: relative;
-  padding: 8px 0;
 }
 
 .headerSolid .navLink {
@@ -100,13 +100,13 @@
 .navLink::after {
   content: "";
   position: absolute;
-  left: 50%;
-  bottom: -6px;
+  left: 8px;
+  right: 8px;
+  bottom: 26px;
   width: 0;
   height: 2px;
   background: #d2aa68;
-  box-shadow: 0 0 10px 1px rgba(210, 170, 104, 0.85);
-  transform: translateX(-50%);
+  margin: 0 auto;
   transition: width 0.35s cubic-bezier(0.2, 0.7, 0.3, 1);
 }
 
@@ -292,31 +292,34 @@
   border-bottom: 1px solid rgba(250, 248, 243, 0.12);
 }
 
-.mobileItemRow {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 4px;
-}
-
 .mobileLink {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(250, 248, 243, 0.12);
   color: #faf8f3;
-  text-decoration: none;
+  font-family: inherit;
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.04em;
+  text-align: left;
   cursor: pointer;
   position: relative;
-  display: inline-block;
-  padding-bottom: 6px;
-  transition: color 0.35s cubic-bezier(0.2, 0.7, 0.3, 1);
+  display: block;
+  width: 100%;
+  min-height: 56px;
+  padding: 18px 12px;
+  box-sizing: border-box;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(210, 170, 104, 0.28);
+  transition: color 0.35s cubic-bezier(0.2, 0.7, 0.3, 1), background 0.25s ease;
 }
 
 .mobileLink::after {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: 0;
+  left: 8px;
+  bottom: 12px;
   width: 0;
   height: 2px;
   background: #d2aa68;
@@ -326,11 +329,12 @@
 .mobileLink:hover,
 .mobileLinkActive {
   color: #d2aa68;
+  background: rgba(210, 170, 104, 0.08);
 }
 
 .mobileLinkActive::after,
 .mobileLink:hover::after {
-  width: 100%;
+  width: 40%;
 }
 
 .mobileToggle {
@@ -356,15 +360,20 @@
 }
 
 .mobileCta {
+  appearance: none;
+  border: 0;
   margin-top: 24px;
   background: #b8863b;
   color: #faf8f3;
   text-align: center;
-  padding: 15px;
+  padding: 16px;
+  font-family: inherit;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.08em;
-  text-decoration: none;
+  width: 100%;
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
 @media (max-width: 1180px) {

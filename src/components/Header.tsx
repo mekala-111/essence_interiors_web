@@ -2,13 +2,14 @@
 
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import AppLink from "./AppLink";
-import { NAV_ITEMS, headerOffset, scrollToId } from "@/lib/nav";
+import { NAV_ITEMS, goTo, headerOffset, scrollToId } from "@/lib/nav";
 import styles from "./Header.module.css";
 
 export default function Header({ forceSolid = false }: { forceSolid?: boolean }) {
   const pathname = usePathname();
+  const router = useRouter();
   const [scrolledState, setScrolledState] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeId, setActiveId] = useState("home");
@@ -87,21 +88,28 @@ export default function Header({ forceSolid = false }: { forceSolid?: boolean })
           &times;
         </button>
         {NAV_ITEMS.map((item) => (
-          <div key={item.label} className={styles.mobileItem}>
-            <div className={styles.mobileItemRow}>
-              <AppLink
-                href={item.href}
-                onNavigate={() => setMobileOpen(false)}
-                className={`${styles.mobileLink} ${isActive(item) ? styles.mobileLinkActive : ""}`}
-              >
-                {item.label}
-              </AppLink>
-            </div>
-          </div>
+          <button
+            key={item.label}
+            type="button"
+            className={`${styles.mobileLink} ${isActive(item) ? styles.mobileLinkActive : ""}`}
+            onClick={() => {
+              setMobileOpen(false);
+              goTo(item.href, (url) => router.push(url));
+            }}
+          >
+            {item.label}
+          </button>
         ))}
-        <AppLink href="/book-consultation" onNavigate={() => setMobileOpen(false)} className={styles.mobileCta}>
+        <button
+          type="button"
+          className={styles.mobileCta}
+          onClick={() => {
+            setMobileOpen(false);
+            goTo("/book-consultation", (url) => router.push(url));
+          }}
+        >
           BOOK CONSULTATION
-        </AppLink>
+        </button>
       </nav>
     </>
   ) : null;

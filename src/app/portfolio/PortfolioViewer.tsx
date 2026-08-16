@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import styles from "./page.module.css";
 
-export const PDF = "/Our_Portfolio.pdf";
+export const PDF = "/Essence_Interiors_Portfolio.pdf";
 
 function isIos() {
   if (typeof navigator === "undefined") return true;
