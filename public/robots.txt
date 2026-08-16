@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+Disallow: /.next
+Disallow: /__next
+Disallow: /private/
+
+# Crawl delay to avoid overloading server (in seconds)
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://essenceinteriors.co.in/sitemap.xml
+
+# Specific search engine directives
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /

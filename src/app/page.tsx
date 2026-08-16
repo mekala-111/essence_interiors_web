@@ -7,14 +7,17 @@ import BeforeAfterSlider from "./BeforeAfterSlider";
 import TestimonialsSection from "./TestimonialsSection";
 import HomeInquiryForm from "./HomeInquiryForm";
 import HeroBg from "./HeroBg";
+import { KEYWORDS, SITE } from "@/lib/seo";
 import styles from "./page.module.css";
 
 const DESCRIPTION =
-  "Interior designers in Hyderabad for homes, villas, modular kitchens and turnkey interiors. Essence Interiors designs and executes residential spaces in Nallagandla and across Hyderabad.";
+  "Best interior designers in Hyderabad. Award-winning luxury home, villa & commercial interior design. Residential, modular kitchens, turnkey projects. Free consultation at Nallagandla experience centre.";
 
 export const metadata: Metadata = {
-  title: { absolute: "Home - Essence Interior Designers" },
+  title: "Best Interior Designers in Hyderabad | Essence Interiors - Luxury Home & Commercial Design",
   description: DESCRIPTION,
+  keywords: KEYWORDS,
+  alternates: { canonical: SITE },
   robots: {
     index: true,
     follow: true,
@@ -26,35 +29,27 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
     },
   },
-  alternates: { canonical: "https://essenceinteriors.co.in/" },
   openGraph: {
-    locale: "en_US",
+    locale: "en_IN",
     type: "website",
-    title: "Home - Essence Interior Designers",
+    title: "Best Interior Designers in Hyderabad | Essence Interiors",
     description: DESCRIPTION,
-    url: "https://essenceinteriors.co.in/",
+    url: SITE,
     siteName: "Essence Interiors",
+    images: [
+      {
+        url: "/images/luxury-interior-design-hyderabad-01.jpg",
+        width: 1200,
+        height: 800,
+        alt: "Luxury interior design in Hyderabad by Essence Interiors",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Home - Essence Interior Designers",
+    title: "Best Interior Designers in Hyderabad | Essence Interiors",
     description: DESCRIPTION,
   },
-  keywords: [
-    "interior designers in Hyderabad",
-    "interior design company in Hyderabad",
-    "home interior designers in Hyderabad",
-    "home interiors in Hyderabad",
-    "interior design services in Hyderabad",
-    "luxury interior designers in Hyderabad",
-    "residential interior designers in Hyderabad",
-    "commercial interior designers in Hyderabad",
-    "modular kitchen designers in Hyderabad",
-    "office interior designers in Hyderabad",
-    "villa interior designers in Hyderabad",
-    "turnkey interior design in Hyderabad",
-    "interior design company Hyderabad",
-  ],
 };
 
 const STATS = [
