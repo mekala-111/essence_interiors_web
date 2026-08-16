@@ -202,10 +202,10 @@ export default function HomePage() {
             (garden, pool design) in Hyderabad.
           </p>
           <div className={styles.heroCtas}>
-            <AppLink href="/#projects" className={styles.heroCtaPrimary}>
+            <AppLink href="/projects" className={styles.heroCtaPrimary}>
               EXPLORE PROJECTS
             </AppLink>
-            <AppLink href="/#contact" className={styles.heroCtaSecondary}>
+            <AppLink href="/book-consultation" className={styles.heroCtaSecondary}>
               BOOK A CONSULTATION
             </AppLink>
           </div>
@@ -566,7 +566,7 @@ export default function HomePage() {
         <a href="https://wa.me/919666199943" className={styles.stickyLink}>
           WHATSAPP
         </a>
-        <AppLink href="/#contact" className={`${styles.stickyLink} ${styles.stickyQuote}`}>
+        <AppLink href="/contact" className={`${styles.stickyLink} ${styles.stickyQuote}`}>
           GET QUOTE
         </AppLink>
       </div>
