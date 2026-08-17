@@ -1243,14 +1243,32 @@
   }
 
   .hero {
+    --hero-img-h: clamp(260px, 62vw, 340px);
     display: block;
     min-height: auto;
-    padding-top: 64px;
+    padding-top: calc(64px + var(--hero-img-h));
     background: #082b1d;
   }
 
+  .heroBg {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    height: var(--hero-img-h);
+  }
+
+  .heroGradient {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    height: var(--hero-img-h);
+    background: linear-gradient(180deg, rgba(5, 20, 14, 0) 0%, rgba(5, 20, 14, 0) 78%, rgba(8, 43, 29, 0.98) 100%);
+  }
+
   .heroInner {
-    padding-top: 22px;
+    padding-top: 24px;
     padding-bottom: 32px;
   }
 
