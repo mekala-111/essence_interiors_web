@@ -85,7 +85,7 @@ export const LOCAL_BUSINESS_JSON_LD = {
   telephone: "+919666199943",
   email: "info@essenceinteriors.co.in",
   image: `${SITE}/images/luxury-interior-design-hyderabad-01.jpg`,
-  logo: `${SITE}/images/essence-interiors-hyderabad-logo.png`,
+  logo: `${SITE}/images/logo.webp`,
   address: {
     "@type": "PostalAddress",
     streetAddress: "HUDA Layout, Gopanpalle, Nallagandla",
@@ -131,7 +131,7 @@ export const ORGANIZATION_JSON_LD = {
   name: "Essence Interiors",
   description: SITE_DESCRIPTION,
   url: SITE,
-  logo: `${SITE}/images/essence-interiors-hyderabad-logo.png`,
+  logo: `${SITE}/images/logo.webp`,
   sameAs: [
     "https://www.instagram.com/essenceinteriors.hyd",
     "https://www.facebook.com/share/1CrC9pQ8sb/",

@@ -22,7 +22,7 @@
 .heroGradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(5, 20, 14, 0.4) 0%, rgba(8, 43, 29, 0.9) 100%);
+  background: linear-gradient(180deg, rgba(5, 20, 14, 0.4) 0%, rgba(10, 29, 27, 0.9) 100%);
 }
 
 .heroInner {
@@ -54,7 +54,7 @@
   font-family: var(--font-display), serif;
   font-weight: 700;
   font-size: clamp(28px, 3.4vw, 42px);
-  color: #082b1d;
+  color: #0a1d1b;
   margin: 0 0 20px;
 }
 
@@ -130,7 +130,7 @@
   font-family: var(--font-display), serif;
   font-weight: 700;
   font-size: 18px;
-  color: #082b1d;
+  color: #0a1d1b;
   margin: 0;
 }
 
@@ -178,7 +178,7 @@
   font-family: var(--font-display), serif;
   font-weight: 700;
   font-size: 17px;
-  color: #082b1d;
+  color: #0a1d1b;
   margin: 0;
 }
 
@@ -192,7 +192,7 @@
   font-family: var(--font-display), serif;
   font-weight: 700;
   font-size: clamp(24px, 3vw, 34px);
-  color: #082b1d;
+  color: #0a1d1b;
   margin: 0 0 28px;
 }
 

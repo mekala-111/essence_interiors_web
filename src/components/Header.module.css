@@ -19,7 +19,7 @@
 }
 
 .headerSolid {
-  background: rgba(8, 43, 29, 0.96);
+  background: rgba(10, 29, 27, 0.96);
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
 }
@@ -61,6 +61,7 @@
   max-width: 220px;
   object-fit: contain;
   display: block;
+  margin-top: 8px;
 }
 
 .nav {
@@ -130,7 +131,7 @@
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background: #082b1d;
+  background: #0a1d1b;
   min-width: 280px;
   padding: 14px 10px;
   border-radius: 10px;
@@ -273,7 +274,7 @@
   right: 0;
   height: 100dvh;
   width: min(320px, 84vw);
-  background: #082b1d;
+  background: #0a1d1b;
   z-index: 600;
   padding: 24px 0 32px;
   display: flex;
@@ -320,7 +321,7 @@
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.04em;
-  background: #082b1d;
+  background: #0a1d1b;
   touch-action: manipulation;
   -webkit-tap-highlight-color: rgba(210, 170, 104, 0.28);
   border: none;
@@ -343,7 +344,7 @@
   width: 56px;
   min-height: 56px;
   border: 0;
-  background: #082b1d;
+  background: #0a1d1b;
   color: #d2aa68;
   font-size: 22px;
   line-height: 1;
@@ -413,7 +414,6 @@
     gap: 12px;
   }
 
-  .logoBare,
   .logoPlate {
     background: #faf8f3;
     padding: 4px 10px;
@@ -421,8 +421,8 @@
   }
 
   .logo {
-    height: 40px;
-    max-width: 120px;
+    height: 56px;
+    max-width: 160px;
   }
 
   .nav,

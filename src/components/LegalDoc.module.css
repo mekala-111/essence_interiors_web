@@ -29,7 +29,7 @@
   font-family: var(--font-display), serif;
   font-size: clamp(32px, 4vw, 48px);
   font-weight: 600;
-  color: #082b1d;
+  color: #0a1d1b;
   margin: 0 0 16px;
 }
 
@@ -50,7 +50,7 @@
   font-family: var(--font-display), serif;
   font-size: 22px;
   font-weight: 600;
-  color: #082b1d;
+  color: #0a1d1b;
   margin: 36px 0 12px;
 }
 

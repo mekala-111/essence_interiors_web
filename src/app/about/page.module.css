@@ -39,7 +39,7 @@
   font-family: var(--font-display), serif;
   font-size: clamp(38px, 5vw, 60px);
   font-weight: 700;
-  color: #082b1d;
+  color: #0a1d1b;
   margin: 0 0 12px;
 }
 
@@ -68,7 +68,7 @@
 }
 
 .darkCta {
-  background: #082b1d;
+  background: #0a1d1b;
   color: #faf8f3;
   text-decoration: none;
   padding: 14px 24px;
@@ -116,7 +116,7 @@
   font-weight: 700;
   font-size: clamp(26px, 3vw, 36px);
   line-height: 1.2;
-  color: #082b1d;
+  color: #0a1d1b;
   margin: 0 0 20px;
 }
 
@@ -148,7 +148,7 @@
 }
 
 .journeyPointText {
-  color: #082b1d;
+  color: #0a1d1b;
   font-size: 14px;
   line-height: 1.5;
   font-weight: 600;
@@ -181,7 +181,7 @@
   font-weight: 700;
   font-size: clamp(28px, 3.4vw, 42px);
   line-height: 1.2;
-  color: #082b1d;
+  color: #0a1d1b;
   margin: 0;
 }
 
@@ -202,7 +202,7 @@
 }
 
 .valueIcon {
-  color: #082b1d;
+  color: #0a1d1b;
   display: block;
   margin: 0 0 18px;
   font-size: 32px;
@@ -212,7 +212,7 @@
   font-size: 14px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: #082b1d;
+  color: #0a1d1b;
   margin: 0 0 12px;
   font-weight: 600;
 }
@@ -227,7 +227,7 @@
 /* ---------- Stats ---------- */
 
 .statsSection {
-  background: #082b1d;
+  background: #0a1d1b;
   padding: 56px 32px;
 }
 

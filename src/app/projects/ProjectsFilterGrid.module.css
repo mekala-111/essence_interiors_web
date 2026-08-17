@@ -115,7 +115,7 @@
   font-family: var(--font-display), serif;
   font-weight: 700;
   font-size: 18px;
-  color: #082b1d;
+  color: #0a1d1b;
   margin: 0 0 8px;
 }
 
@@ -150,7 +150,7 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: #082b1d;
+  background: #0a1d1b;
   color: #faf8f3;
   display: flex;
   align-items: center;

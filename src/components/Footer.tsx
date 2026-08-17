@@ -41,7 +41,7 @@ export default async function Footer({ hideShowcase = false }: { hideShowcase?: 
           <div>
             <div className={styles.logoChip}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/essence-interiors-hyderabad-logo.png" alt="Essence Interiors" className={styles.logo} />
+              <img src="/images/logo.webp" alt="Essence Interiors" className={styles.logo} />
             </div>
             <p className={styles.tagline}>Where Science &amp; Art Breakeven</p>
             <p className={styles.blurb}>

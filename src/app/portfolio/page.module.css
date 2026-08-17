@@ -1,6 +1,6 @@
 .page {
   font-family: var(--font-body), sans-serif;
-  background: #082b1d;
+  background: #0a1d1b;
   color: #20231f;
   min-height: 100vh;
 }
@@ -41,12 +41,12 @@
   font-family: var(--font-display), serif;
   font-size: clamp(32px, 4vw, 48px);
   font-weight: 700;
-  color: #082b1d;
+  color: #0a1d1b;
   margin: 0;
 }
 
 .download {
-  background: #082b1d;
+  background: #0a1d1b;
   color: #faf8f3;
   text-decoration: none;
   padding: 14px 22px;
@@ -68,7 +68,7 @@
   flex-direction: column;
   gap: 16px;
   padding: 20px 20px 40px;
-  background: #082b1d;
+  background: #0a1d1b;
 }
 
 .cover {
@@ -90,7 +90,7 @@
   height: calc(100vh - 88px - 118px);
   min-height: 640px;
   border: 0;
-  background: #082b1d;
+  background: #0a1d1b;
 }
 
 @media (max-width: 1180px) {

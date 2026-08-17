@@ -42,11 +42,11 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(8, 43, 29, 0.55);
+  background: rgba(10, 29, 27, 0.55);
 }
 
 .overlay.active {
-  background: linear-gradient(0deg, rgba(8, 43, 29, 0.85) 0%, rgba(8, 43, 29, 0.15) 60%);
+  background: linear-gradient(0deg, rgba(10, 29, 27, 0.85) 0%, rgba(10, 29, 27, 0.15) 60%);
 }
 
 .activeContent {

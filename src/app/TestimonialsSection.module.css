@@ -45,7 +45,7 @@
   font-size: clamp(32px, 4vw, 50px);
   line-height: 1.1;
   text-transform: uppercase;
-  color: #082b1d;
+  color: #0a1d1b;
   margin: 0 0 24px;
 }
 
@@ -230,7 +230,7 @@
 }
 
 .statsBar {
-  background: #082b1d;
+  background: #0a1d1b;
   border-radius: 16px;
   padding: 36px 48px;
   display: grid;

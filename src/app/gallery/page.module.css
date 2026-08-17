@@ -53,7 +53,7 @@
   font-family: var(--font-display), serif;
   font-size: clamp(42px, 6vw, 64px);
   font-weight: 700;
-  color: #082b1d;
+  color: #0a1d1b;
   margin: 0 0 14px;
   letter-spacing: 0.02em;
 }
@@ -102,7 +102,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #082b1d;
+  background: #0a1d1b;
   color: #d2aa68;
   border: 0;
   border-radius: 8px;
@@ -148,7 +148,7 @@
   letter-spacing: 0.08em;
   font-weight: 600;
   cursor: pointer;
-  color: #082b1d;
+  color: #0a1d1b;
   white-space: nowrap;
   position: relative;
 }
@@ -181,7 +181,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  color: #082b1d;
+  color: #0a1d1b;
   font-size: 11px;
   letter-spacing: 0.08em;
   font-weight: 600;
@@ -237,7 +237,7 @@
   left: 12px;
   bottom: 12px;
   background: rgba(255, 255, 255, 0.94);
-  color: #082b1d;
+  color: #0a1d1b;
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -246,7 +246,7 @@
 }
 
 .ctaBar {
-  background: #082b1d;
+  background: #0a1d1b;
   padding: 48px 32px;
 }
 
@@ -288,7 +288,7 @@
   align-items: center;
   gap: 10px;
   background: #c4a36a;
-  color: #082b1d;
+  color: #0a1d1b;
   text-decoration: none;
   padding: 14px 22px;
   font-size: 12px;

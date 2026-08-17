@@ -22,7 +22,7 @@
 .heroGradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(5, 20, 14, 0.4) 0%, rgba(8, 43, 29, 0.9) 100%);
+  background: linear-gradient(180deg, rgba(5, 20, 14, 0.4) 0%, rgba(10, 29, 27, 0.9) 100%);
 }
 
 .heroInner {
@@ -74,7 +74,7 @@
   font-weight: 700;
   font-size: clamp(26px, 3vw, 36px);
   line-height: 1.25;
-  color: #082b1d;
+  color: #0a1d1b;
   margin: 0 0 22px;
 }
 
@@ -126,13 +126,13 @@
 
 .spaceName {
   font-weight: 600;
-  color: #082b1d;
+  color: #0a1d1b;
   margin: 0;
   font-size: 15px;
 }
 
 .furnitureSection {
-  background: #082b1d;
+  background: #0a1d1b;
   padding: 100px 32px;
 }
 
@@ -222,7 +222,7 @@
   font-family: var(--font-display), serif;
   font-weight: 700;
   font-size: 17px;
-  color: #082b1d;
+  color: #0a1d1b;
   margin: 0;
 }
 
@@ -236,7 +236,7 @@
   font-family: var(--font-display), serif;
   font-weight: 700;
   font-size: clamp(24px, 3vw, 34px);
-  color: #082b1d;
+  color: #0a1d1b;
   margin: 0 0 28px;
 }
 

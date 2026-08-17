@@ -88,7 +88,7 @@ export function contactEmail(data: {
   <div style="background:#f4efe6;padding:28px 12px;font-family:Georgia,'Times New Roman',serif;">
     <table width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;margin:0 auto;background:#ffffff;border:1px solid #ede4d0;">
       <tr>
-        <td style="background:#082B1D;padding:28px 32px;">
+        <td style="background:#0A1D1B;padding:28px 32px;">
           <p style="margin:0 0 6px;color:#d2aa68;font-family:Arial,sans-serif;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;">Essence Interiors</p>
           <h1 style="margin:0;color:#faf8f3;font-size:26px;font-weight:500;">Get In Touch</h1>
           <p style="margin:10px 0 0;color:#cfc6b4;font-family:Arial,sans-serif;font-size:13px;">A new message from the website contact form.</p>
@@ -137,17 +137,17 @@ export function consultationEmail(data: {
   ].join("\n");
 
   const html = `
-  <div style="background:#082B1D;padding:28px 12px;font-family:Arial,sans-serif;">
+  <div style="background:#0A1D1B;padding:28px 12px;font-family:Arial,sans-serif;">
     <table width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;margin:0 auto;background:#faf8f3;border:1px solid #d2aa68;">
       <tr>
         <td style="background:#b8863b;padding:22px 32px;">
-          <p style="margin:0 0 4px;color:#082B1D;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;font-weight:700;">New booking</p>
-          <h1 style="margin:0;color:#082B1D;font-size:24px;font-weight:700;font-family:Georgia,serif;">Book A Consultation</h1>
+          <p style="margin:0 0 4px;color:#0A1D1B;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;font-weight:700;">New booking</p>
+          <h1 style="margin:0;color:#0A1D1B;font-size:24px;font-weight:700;font-family:Georgia,serif;">Book A Consultation</h1>
         </td>
       </tr>
       <tr>
         <td style="padding:24px 32px 8px;">
-          <div style="background:#082B1D;color:#faf8f3;padding:16px 18px;">
+          <div style="background:#0A1D1B;color:#faf8f3;padding:16px 18px;">
             <p style="margin:0;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#d2aa68;">Preferred slot</p>
             <p style="margin:6px 0 0;font-size:20px;font-family:Georgia,serif;">${escapeHtml(when)}</p>
           </div>

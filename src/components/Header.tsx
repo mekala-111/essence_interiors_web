@@ -113,7 +113,11 @@ export default function Header({ forceSolid = false }: { forceSolid?: boolean })
           <Link href="/" className={styles.logoLink}>
             <div className={scrolled ? styles.logoPlate : styles.logoBare}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/essence-interiors-hyderabad-logo.png" alt="Essence Interiors" className={styles.logo} />
+              <img
+                src="/images/logo.webp"
+                alt="Essence Interiors"
+                className={styles.logo}
+              />
             </div>
           </Link>
 
