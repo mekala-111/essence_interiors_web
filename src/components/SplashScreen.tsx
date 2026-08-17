@@ -6,37 +6,55 @@ import styles from "./SplashScreen.module.css";
 
 export default function SplashScreen() {
   const pathname = usePathname();
-  const [phase, setPhase] = useState<"in" | "out" | "done">(pathname === "/" ? "in" : "done");
+  const [phase, setPhase] = useState<"in" | "out" | "done">("in");
+  const [shouldShow, setShouldShow] = useState(false);
 
   useEffect(() => {
+    // Only show on homepage
     if (pathname !== "/") {
       setPhase("done");
       return;
     }
 
-    if (sessionStorage.getItem("ei-splash") || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    // Check if splash was already shown in this session
+    const hasSeenSplash = sessionStorage.getItem("ei-splash-shown");
+
+    // Skip if user prefers reduced motion
+    if (hasSeenSplash || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       setPhase("done");
+      setShouldShow(false);
       return;
     }
 
-    sessionStorage.setItem("ei-splash", "1");
-    const prev = document.body.style.overflow;
+    // Mark splash as shown for this session
+    sessionStorage.setItem("ei-splash-shown", "1");
+    setShouldShow(true);
+
+    // Prevent body scroll during splash
+    const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
 
-    const fade = window.setTimeout(() => setPhase("out"), 3400);
-    const hide = window.setTimeout(() => {
-      document.body.style.overflow = prev;
+    // Fade out animation starts at 3.4s
+    const fadeTimer = window.setTimeout(() => {
+      setPhase("out");
+    }, 3400);
+
+    // Hide completely at 4.1s
+    const hideTimer = window.setTimeout(() => {
+      document.body.style.overflow = prevOverflow;
       setPhase("done");
+      setShouldShow(false);
     }, 4100);
 
     return () => {
-      window.clearTimeout(fade);
-      window.clearTimeout(hide);
-      document.body.style.overflow = prev;
+      window.clearTimeout(fadeTimer);
+      window.clearTimeout(hideTimer);
+      document.body.style.overflow = prevOverflow;
     };
   }, [pathname]);
 
-  if (pathname !== "/" || phase === "done") return null;
+  // Only render if on home page AND should show splash
+  if (pathname !== "/" || !shouldShow || phase === "done") return null;
 
   return (
     <div

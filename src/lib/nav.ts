@@ -12,7 +12,6 @@ export const NAV_ITEMS: NavItem[] = [
     children: [
       { label: "Residential Projects", href: "/projects?cat=Residential#grid", icon: "home" },
       { label: "Commercial Projects", href: "/projects?cat=Commercial#grid", icon: "apartment" },
-      { label: "Hospitality Projects", href: "/projects?cat=Hospitality#grid", icon: "weekend" },
       { label: "Featured Projects", href: "/projects", icon: "diamond" },
     ],
   },

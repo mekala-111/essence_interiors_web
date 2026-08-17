@@ -1243,44 +1243,54 @@
   }
 
   .hero {
-    min-height: 100svh;
+    display: block;
+    min-height: auto;
     padding-top: 64px;
+    background: #082b1d;
   }
 
   .heroInner {
-    padding-top: 12px;
-    padding-bottom: 112px;
+    padding-top: 22px;
+    padding-bottom: 32px;
   }
 
   .heroEyebrow {
     font-size: 11px;
-    margin: 0 0 10px;
+    margin: 0 0 8px;
   }
 
   .heroTitle {
-    font-size: 30px;
-    line-height: 1.08;
-    margin: 0 0 12px;
+    font-size: clamp(34px, 9.5vw, 44px);
+    line-height: 1.05;
+    margin: 0 0 10px;
   }
 
   .heroLede {
     font-size: 14px;
     line-height: 1.5;
-    margin: 0 0 20px;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    margin: 0 0 18px;
   }
 
   .statsSection {
-    margin-top: -40px;
+    margin-top: -16px;
     padding-left: 20px;
     padding-right: 20px;
   }
 
   .statsBar {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .statCell {
+    padding: 20px 16px;
+  }
+
+  .statValue {
+    font-size: 24px;
+  }
+
+  .statLabel {
+    font-size: 11px;
   }
 
   .storyWatermark,
@@ -1303,7 +1313,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 14px 8px;
+    min-height: 50px;
+    padding: 0 10px;
     font-size: 11px;
     letter-spacing: 0.03em;
     white-space: nowrap;
@@ -1385,5 +1396,78 @@
 
   .stickyBar {
     display: flex;
+  }
+
+  /* ---------- Mobile section rhythm ---------- */
+
+  .story {
+    margin: 64px auto 48px;
+  }
+
+  .intentionSplit,
+  .diffSplit {
+    min-height: auto;
+  }
+
+  .intentionCopy {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .servicesSection {
+    padding-top: 56px;
+    padding-bottom: 56px;
+    margin-bottom: 56px;
+  }
+
+  .projectsSection {
+    margin-bottom: 56px;
+  }
+
+  .diffValuesWrap {
+    padding-bottom: 48px;
+  }
+
+  .trustBarWrap {
+    padding-bottom: 48px;
+  }
+
+  .trustBar {
+    padding: 28px 24px;
+  }
+
+  .materialsSection {
+    margin-bottom: 56px;
+  }
+
+  .processSection {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .baSection {
+    margin-top: 56px;
+    margin-bottom: 48px;
+  }
+
+  .gallerySection {
+    margin-bottom: 56px;
+  }
+
+  .testimonialsSection {
+    padding-top: 56px;
+  }
+
+  .consultSection {
+    margin-bottom: 48px;
+  }
+
+  .consultForm {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .consultImg {
+    min-height: 200px;
   }
 }

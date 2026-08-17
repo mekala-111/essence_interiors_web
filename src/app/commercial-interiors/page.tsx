@@ -49,7 +49,6 @@ const SEGMENTS = ["Offices", "Retail Stores", "Shopping Malls", "Warehouses", "C
 
 const EXAMPLES = [
   { name: "North Star Offices", slug: "north-star-offices" },
-  { name: "Lumen Café", slug: "urban-restaurant" },
   { name: "Vertex Corporate HQ", slug: "elegant-workspace" },
 ];
 

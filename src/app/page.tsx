@@ -136,7 +136,7 @@ const DIFFERENCE_VALUES = [
 const TRUST_STATS = [
   { icon: "diversity_3", value: "10+", label: "Years of Experience" },
   { icon: "apartment", value: "250+", label: "Projects Completed" },
-  { icon: "public", value: "50+", label: "Cities Served" },
+  { icon: "public", value: "100%", label: "Hyderabad Focused" },
   { icon: "favorite", value: "98%", label: "Client Satisfaction" },
 ];
 
@@ -190,11 +190,8 @@ export default function HomePage() {
             IN <em>HYDERABAD</em>
           </h1>
           <p className={styles.heroLede}>
-            The best Interior Designers in Hyderabad. We provide residential interior designs as well as
-            residential architectural designs. Our projects include luxury villa design (bedroom interior,
-            bathroom interior, kitchen interior, hall entrance family living room, space planning), villa
-            exterior design (exterior design proposals, boundaries design), and interior landscape design
-            (garden, pool design) in Hyderabad.
+            The best Interior Designers in Hyderabad. We create elegant residential interiors and architectural
+            designs, from luxury villas to beautifully crafted kitchens, bedrooms and living spaces.
           </p>
           <div className={styles.heroCtas}>
             <AppLink href="/projects" className={styles.heroCtaPrimary}>
@@ -248,6 +245,11 @@ export default function HomePage() {
               as the backbone of the planning, we as one of the successful residential interior designers in
               Hyderabad do not hesitate to expand our capabilities to bring out the unique environment to which you
               aspire.
+            </p>
+            <p className={styles.storyLede}>
+              Our projects include luxury villa design (bedroom interior, bathroom interior, kitchen interior, hall
+              entrance family living room, space planning), villa exterior design (exterior design proposals,
+              boundaries design), and interior landscape design (garden, pool design) in Hyderabad.
             </p>
             <AppLink href="/#about" className={styles.textLink}>
               DISCOVER OUR STORY →

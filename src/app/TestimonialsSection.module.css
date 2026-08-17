@@ -281,6 +281,7 @@
   .statsWrap {
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 48px;
   }
   .statsBar {
     grid-template-columns: 1fr 1fr;

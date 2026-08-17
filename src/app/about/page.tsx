@@ -53,7 +53,7 @@ const VALUES = [
 const ABOUT_STATS = [
   { icon: "diversity_3", value: "10+", label: "Years of Experience" },
   { icon: "apartment", value: "250+", label: "Projects Completed" },
-  { icon: "location_on", value: "50+", label: "Cities Served" },
+  { icon: "location_on", value: "100%", label: "Hyderabad Focused" },
   { icon: "star", value: "98%", label: "Client Satisfaction" },
 ];
 

@@ -5,7 +5,7 @@ import Link from "next/link";
 import type { ProjectDetail } from "@/lib/projects";
 import styles from "./ProjectsFilterGrid.module.css";
 
-const FILTERS = ["All Projects", "Residential", "Villa", "Apartment", "Commercial", "Office Spaces", "Hospitality"];
+const FILTERS = ["All Projects", "Residential", "Villa", "Apartment", "Commercial", "Office Spaces"];
 
 export default function ProjectsFilterGrid({
   projects,

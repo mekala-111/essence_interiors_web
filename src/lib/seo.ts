@@ -42,8 +42,7 @@ export const KEYWORDS = [
   "villa interiors",
   "modular kitchen design",
   "turnkey interior projects",
-  "hospitality interior design",
-  
+
   // Long-tail keywords
   "luxury home interiors Hyderabad",
   "affordable luxury interiors Hyderabad",

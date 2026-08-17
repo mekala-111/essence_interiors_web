@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import styles from "../commercial-interiors/page.module.css";
 
 const DESCRIPTION =
-  "Why Essence Interiors designing company provides the best quality materials for interior designing in Hyderabad and around. The evergreen interior designing";
+  "Why Essence Interiors designing company provides the best quality materials for interior designing in Hyderabad and around. The Essence Interiors designing";
 
 export const metadata: Metadata = {
   title: { absolute: "Why Essence Interiors - Essence Interior Designers" },
@@ -74,7 +74,7 @@ export default function WhyEssenceInteriorsPage() {
             <h2 className={styles.introHeading}>Why Essence Interiors</h2>
             <p className={styles.introText}>
               Why Essence Interiors designing company provides the best quality materials for interior designing in
-              Hyderabad and around. The evergreen interior designing company uses worldwide materials and models for our
+              Hyderabad and around. The Essence Interiors designing company uses worldwide materials and models for our
               Interiors designing, from all over the world. Modular kitchens, false ceilings, electricity works are very
               updated and safe for any kind of commercial, residential and villas.
             </p>
@@ -90,7 +90,8 @@ export default function WhyEssenceInteriorsPage() {
               importantly availability of spaces to organize and provide the latest home appliances.
             </p>
             <p className={styles.introText} style={{ marginBottom: 0 }}>
-              We are also operating in main cities like Tirupati, Nellore, Vijayawada
+              We currently serve Hyderabad and its surrounding areas, delivering thoughtfully designed interiors
+              tailored to every client&apos;s lifestyle and needs.
             </p>
           </div>
           <div className={styles.splitImgs}>

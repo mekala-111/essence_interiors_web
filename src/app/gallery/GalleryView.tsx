@@ -24,7 +24,6 @@ const FILTERS = [
   "BATHROOM",
   "OFFICE SPACES",
   "COMMERCIAL",
-  "HOSPITALITY",
 ];
 
 const CTA_POINTS = [

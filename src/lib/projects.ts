@@ -37,7 +37,7 @@ const RAW_PROJECTS: Omit<ProjectDetail, "slug">[] = [
   },
   {
     name: "Serene Residence",
-    location: "Bangalore",
+    location: "Kondapur",
     category: "Residential",
     area: "3,200 sq.ft.",
     year: "2023",
@@ -48,12 +48,12 @@ const RAW_PROJECTS: Omit<ProjectDetail, "slug">[] = [
     testimonial: {
       quote: "Every corner of our home now feels intentional. Essence listened to how we actually live.",
       name: "Ananya & Rohit Sharma",
-      project: "Residential · Bangalore",
+      project: "Residential · Kondapur",
     },
   },
   {
     name: "Luxury Apartment",
-    location: "Mumbai",
+    location: "Financial District",
     category: "Apartment",
     area: "2,100 sq.ft.",
     year: "2024",
@@ -64,7 +64,7 @@ const RAW_PROJECTS: Omit<ProjectDetail, "slug">[] = [
     testimonial: {
       quote: "Sophisticated without ever feeling cold. It genuinely feels like the best version of our home.",
       name: "Priya Menon",
-      project: "Apartment · Mumbai",
+      project: "Apartment · Financial District",
     },
   },
   {
@@ -85,7 +85,7 @@ const RAW_PROJECTS: Omit<ProjectDetail, "slug">[] = [
   },
   {
     name: "Timeless Bedroom",
-    location: "Pune",
+    location: "Nallagandla",
     category: "Residential",
     area: "1,800 sq.ft.",
     year: "2022",
@@ -96,12 +96,12 @@ const RAW_PROJECTS: Omit<ProjectDetail, "slug">[] = [
     testimonial: {
       quote: "They transformed a difficult layout into the most functional, beautiful home we could imagine.",
       name: "The Kapoor Family",
-      project: "Residential · Pune",
+      project: "Residential · Nallagandla",
     },
   },
   {
     name: "Modern Kitchen",
-    location: "Chennai",
+    location: "Manikonda",
     category: "Residential",
     area: "400 sq.ft.",
     year: "2024",
@@ -112,23 +112,7 @@ const RAW_PROJECTS: Omit<ProjectDetail, "slug">[] = [
     testimonial: {
       quote: "The attention to detail on materials and finishes was remarkable. Every corner feels considered.",
       name: "Neha Malhotra",
-      project: "Residential · Chennai",
-    },
-  },
-  {
-    name: "Urban Restaurant",
-    location: "Goa",
-    category: "Hospitality",
-    area: "3,500 sq.ft.",
-    year: "2023",
-    concept:
-      "A coastal restaurant brief asked for atmosphere first — we built the space around natural texture, low warm light and sightlines to the open kitchen.",
-    rooms: ["Main Dining", "Bar", "Private Dining", "Open Kitchen", "Outdoor Deck", "Waiting Lounge"],
-    materials: ["Reclaimed Timber", "Terracotta Tile", "Rattan Weave", "Blackened Steel", "Linen Drapery", "Warm Brass"],
-    testimonial: {
-      quote: "Essence understood exactly what we wanted before we could put it into words. The result feels effortless.",
-      name: "Lumen Café Ownership",
-      project: "Hospitality · Goa",
+      project: "Residential · Manikonda",
     },
   },
   {
